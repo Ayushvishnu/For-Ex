@@ -6,29 +6,29 @@ function FAQ() {
 
   const faqData = [
     {
-      question: "What does GreeksLabs Technologies provide?",
+      question: "What is Forex trading?",
       answer:
-        "GreeksLabs Technologies helps traders convert their trading ideas, market concepts and rule-based strategies into structured algorithmic trading solutions.",
+        "Forex trading is the buying and selling of currency pairs such as EUR/USD and GBP/USD. Traders study market movements and other factors before making trading decisions.",
     },
     {
-      question: "Can I convert my own Forex strategy into an algo?",
+      question: "How does the Forex market work?",
       answer:
-        "Yes. You can explain your entry conditions, exit conditions, stop loss, target, indicators, timeframe and other trading rules. Our team can review the logic and structure it for algorithmic development.",
+        "The Forex market is a global market where currencies are traded in pairs. Prices can move based on factors such as economic data, interest rates, news and market demand.",
     },
     {
-      question: "Do you support MT4 and MT5?",
+      question: "What are currency pairs in Forex?",
       answer:
-        "Yes. Forex strategy development can be planned for MT4, MT5 or both depending on your requirement and trading setup.",
+        "A currency pair shows the value of one currency against another. Major pairs include EUR/USD, GBP/USD, USD/JPY and USD/CHF.",
     },
     {
-      question: "Can you develop strategies for Gold / XAUUSD?",
+      question: "What is Forex market analysis?",
       answer:
-        "Yes. Strategy requirements can include XAU/USD as well as major Forex currency pairs and other supported instruments.",
+        "Forex market analysis involves studying price movements, economic factors and market trends to better understand possible market conditions.",
     },
     {
-      question: "Do you guarantee profit from an algo strategy?",
+      question: "Is Forex trading profitable?",
       answer:
-        "No. Trading involves financial risk and algorithmic trading does not guarantee profitability. Market conditions, strategy limitations and technical factors can affect results.",
+        "Forex trading involves risk, and profits are never guaranteed. Market prices can change quickly, so understanding risk management and having a clear trading plan are important.",
     },
     // {
     //   question: "What information should I provide for development?",
@@ -54,17 +54,11 @@ function FAQ() {
   return (
     <section className="faq-section" id="faq">
       <div className="container">
-
         {/* HEADER */}
 
         <div className="row justify-content-center">
           <div className="col-12 col-lg-8 text-center">
-
-            <div
-              className="faq-tag"
-              data-aos="fade-up"
-              data-aos-duration="700"
-            >
+            <div className="faq-tag" data-aos="fade-up" data-aos-duration="700">
               FREQUENTLY ASKED QUESTIONS
             </div>
 
@@ -73,8 +67,7 @@ function FAQ() {
               data-aos="fade-up"
               data-aos-duration="800"
             >
-              Questions Before You{" "}
-              <span>Start?</span>
+              Questions About <span>Forex Trading?</span>
             </h2>
 
             <p
@@ -82,28 +75,23 @@ function FAQ() {
               data-aos="fade-up"
               data-aos-duration="900"
             >
-              Understand how our Forex strategy development and algorithmic
-              trading process works before starting your project.
+              Find simple answers to common questions about Forex trading,
+              currency pairs, market analysis and risk management.
             </p>
-
           </div>
         </div>
-
 
         {/* FAQ CONTENT */}
 
         <div className="row g-4 faq-main-row">
-
           {/* LEFT INFO */}
 
           <div className="col-12 col-lg-4">
-
             <div
               className="faq-side-card"
               data-aos="fade-right"
               data-aos-duration="900"
             >
-
               <div className="faq-side-icon">
                 <i className="bi bi-chat-square-dots-fill"></i>
               </div>
@@ -115,8 +103,8 @@ function FAQ() {
               </h3>
 
               <p>
-                Tell us about your strategy idea and our team can help you
-                understand the next steps.
+                have a Question about Forex trading or the currency market? Our
+                team is here to help you understand the basics and get started.
               </p>
 
               <button className="faq-contact-btn">
@@ -130,26 +118,21 @@ function FAQ() {
                 <i className="bi bi-headset"></i>
 
                 <div>
-                  <span>Strategy Support</span>
-                  <p>Forex • MT4 • MT5 • Algo</p>
+                  <span>Forex Support</span>
+                  <p>Forex • Currency Pairs • Market Analysis</p>
                 </div>
               </div>
-
             </div>
-
           </div>
-
 
           {/* RIGHT ACCORDION */}
 
           <div className="col-12 col-lg-8">
-
             <div
               className="faq-list"
               data-aos="fade-left"
               data-aos-duration="900"
             >
-
               {faqData.map((faq, index) => (
                 <div
                   className={`faq-item ${
@@ -157,28 +140,20 @@ function FAQ() {
                   }`}
                   key={index}
                 >
-
                   <button
                     className="faq-question"
                     onClick={() => toggleFAQ(index)}
                     aria-expanded={activeIndex === index}
                   >
-
                     <div className="faq-question-left">
-
                       <span className="faq-number">
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <h4>
-                        {faq.question}
-                      </h4>
-
+                      <h4>{faq.question}</h4>
                     </div>
 
-
                     <span className="faq-toggle">
-
                       <i
                         className={
                           activeIndex === index
@@ -186,66 +161,46 @@ function FAQ() {
                             : "bi bi-plus-lg"
                         }
                       ></i>
-
                     </span>
-
                   </button>
-
 
                   <div
                     className={`faq-answer ${
                       activeIndex === index ? "show" : ""
                     }`}
                   >
-
                     <div className="faq-answer-inner">
-                      <p>
-                        {faq.answer}
-                      </p>
+                      <p>{faq.answer}</p>
                     </div>
-
                   </div>
-
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
-
 
         {/* BOTTOM CTA */}
 
         <div className="row">
-
           <div className="col-12">
-
             <div className="faq-bottom">
-
               <div>
                 <span className="faq-bottom-title">
-                  Ready to Build Your Strategy?
+                  Ready to Learn More About Forex?
                 </span>
 
                 <p>
-                  Share your trading logic with GreeksLabs.
+                  Build your understanding of Forex trading, market analysis and
+                  risk management.{" "}
                 </p>
               </div>
 
-
               <button className="faq-start-btn">
-                Start Your Strategy
-                <i className="bi bi-arrow-right"></i>
+                Learn Forex Trading → <i className="bi bi-arrow-right"></i>
               </button>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

@@ -111,7 +111,7 @@ function Testimonials() {
                     <div className="testimonial-user-info">
                       <h4>Rahul M.</h4>
 
-                      <p>Algo Trader • MT4</p>
+                      <p>Forex Trader · MT5</p>
                     </div>
 
                     <div className="mini-quote">
@@ -120,9 +120,9 @@ function Testimonials() {
                   </div>
 
                   <p className="small-quote">
-                    “The requirement discussion was clear and practical. Every
-                    condition in my strategy was reviewed before moving into
-                    development.”
+                    “The Forex insights were simple and practical. I found it
+                    easier to follow market movements and understand the factors
+                    affecting currency pairs.”
                   </p>
 
                   <div className="testimonial-stars small-stars">
@@ -149,7 +149,7 @@ function Testimonials() {
                     <div className="testimonial-user-info">
                       <h4>Deepak S.</h4>
 
-                      <p>Strategy Developer • Forex</p>
+                      <p>Forex Trader • Market Analysis</p>
                     </div>
 
                     <div className="mini-quote">
@@ -158,9 +158,9 @@ function Testimonials() {
                   </div>
 
                   <p className="small-quote">
-                    “I liked that the focus was on defining the strategy logic
-                    properly rather than making unrealistic performance
-                    promises.”
+                    “I liked the focus on market analysis and risk management.
+                    The information was straightforward and helped me understand
+                    the Forex market better.”
                   </p>
 
                   <div className="testimonial-stars small-stars">
@@ -180,17 +180,15 @@ function Testimonials() {
             BOTTOM
         ================================ */}
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12">
             <div className="testimonial-bottom">
               <div className="testimonial-bottom-text">
                 <span className="testimonial-bottom-number">
-                  Strategy First.
+                  Forex Focused.
                 </span>
 
-                <span>
-                  Technology that works around the trader&apos;s logic.
-                </span>
+                <span>Clear insights for better Forex trading decisions. </span>
               </div>
 
               <button className="testimonial-view-btn">
@@ -199,7 +197,7 @@ function Testimonials() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
