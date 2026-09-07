@@ -1,0 +1,556 @@
+/* =========================================
+   ALGORITHM TRADING SECTION
+========================================= */
+
+.algo-section {
+  width: 100%;
+
+  /* padding: 95px 0 50px; */
+    padding: 10px 0;
+
+
+  /* background: #150d09; */
+    background: #000000;
+
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.algo-tag {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 17px;
+
+  margin-bottom: 12px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  background: rgba(255, 215, 0, 0.05);
+
+  color: #ffd700;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+
+
+  background: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+
+}
+
+
+/* Heading */
+
+.algo-heading {
+  margin: 0;
+
+  color: #f8f6f4;
+
+  font-size: clamp(36px, 4vw, 48px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+.algo-heading span {
+  /* color: #ffd700; */
+
+
+  /* color: #cdcf4b; */
+  /* color: #C9A227; */
+  /* color: #D4AF37; */
+  /* color: #E0B84C; */
+  /* color: #B8860B ; */
+
+  /* color: #D4AF37; */
+
+  /* background: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.24),
+    0 0 20px rgba(255, 215, 0, 0.08); */
+
+      background: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+
+/* Description */
+
+.algo-description {
+  max-width: 720px;
+
+  margin: 18px auto 0;
+
+  color: #cfc4be;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   PROCESS ROW
+========================================= */
+
+.algo-process-row {
+  margin-top: 38px;
+}
+
+
+/* Process card */
+
+.algo-process-card {
+  width: 100%;
+
+  min-height: 110px;
+
+  padding: 22px 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 215, 0, 0.07);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(47, 32, 25, 0.94),
+      rgba(39, 25, 20, 0.96)
+    );
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.22),
+    -3px -3px 12px rgba(255, 255, 255, 0.01);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+    margin-top: 34px;
+}
+
+
+.algo-process-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 215, 0, 0.3);
+
+  box-shadow:
+    10px 14px 28px rgba(0, 0, 0, 0.28),
+    0 0 22px rgba(255, 215, 0, 0.04);
+}
+
+
+/* Icon */
+
+.algo-process-icon {
+  color: #ffd700;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+
+.algo-process-card h5 {
+  margin: 0;
+
+  color: #e3d8d1;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   COMPARISON AREA
+========================================= */
+
+.algo-comparison-row {
+  margin-top: 155px;
+}
+
+
+/* Common card */
+
+.algo-info-card {
+  height: 100%;
+
+  min-height: 315px;
+
+  padding: 32px 34px;
+
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #2c1e18,
+      #291b16
+    );
+
+  box-shadow:
+    10px 10px 26px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+    margin-top: 33px;
+}
+
+
+.algo-info-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    14px 16px 32px rgba(0, 0, 0, 0.28);
+}
+
+
+/* Advantages */
+
+.advantage-card {
+  border-left: 4px solid #ffd700;
+}
+
+
+/* Consideration */
+
+.consideration-card {
+  border-left: 4px solid #cdcf4b;
+}
+
+
+/* =========================================
+   CARD HEADINGS
+========================================= */
+
+.algo-info-card h3 {
+  margin: 0 0 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+.advantage-title {
+  color: #ffd700;
+}
+
+
+.consideration-title {
+  color: #cdcf4b;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.algo-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.algo-list-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #decfc7;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+}
+
+
+/* Advantages check */
+
+.advantage-item i {
+  flex-shrink: 0;
+
+  color: #ffd700;
+
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+
+/* Consideration dot */
+
+.consideration-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+background: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+
+  /* box-shadow:
+    0 0 8px rgba(199, 203, 203, 0.15); */
+}
+
+
+/* =========================================
+   DISCLAIMER
+========================================= */
+
+.algo-disclaimer {
+  margin-top: 60px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 215, 0, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #967e71;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+.algo-disclaimer i {
+  color: #9f8060;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .algo-section {
+    padding: 85px 0 45px;
+  }
+
+
+  .algo-comparison-row {
+    margin-top: 110px;
+  }
+
+
+  .algo-process-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .algo-section {
+    padding: 75px 0 40px;
+  }
+
+
+  .algo-comparison-row {
+    margin-top: 80px;
+  }
+
+
+  .algo-info-card {
+    min-height: auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .algo-section {
+    padding: 65px 0 35px;
+  }
+
+
+  .algo-heading {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .algo-description {
+    font-size: 15px;
+  }
+
+
+  .algo-process-row {
+    margin-top: 30px;
+  }
+
+
+  .algo-comparison-row {
+    margin-top: 60px;
+  }
+
+
+  .algo-info-card {
+    padding: 28px 25px;
+  }
+
+
+  .algo-list-item {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+  .algo-heading {
+    font-size: 32px;
+  }
+
+
+  .algo-process-card {
+    min-height: 95px;
+
+    border-radius: 20px;
+  }
+
+
+  .algo-process-icon {
+    font-size: 24px;
+  }
+
+
+  .algo-info-card {
+    padding: 25px 20px;
+
+    border-radius: 20px;
+  }
+
+
+  .algo-list {
+    gap: 17px;
+  }
+
+
+  .algo-disclaimer {
+    align-items: flex-start;
+
+    text-align: left;
+
+    line-height: 1.5;
+  }
+
+}
