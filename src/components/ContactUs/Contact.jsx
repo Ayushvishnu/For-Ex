@@ -2,16 +2,236 @@ import { useState } from "react";
 import "./Contact.css";
 
 function Contact() {
+  // const [market, setMarket] = useState("");
+  // const [submitted, setSubmitted] = useState(false);
+
+
+
   const [market, setMarket] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const [submitted, setSubmitted] =
+  useState(false);
 
-    // API call can be added here later
+const [loading, setLoading] =
+  useState(false);
+
+const [error, setError] =
+  useState("");
+
+
+const [formData, setFormData] =
+  useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    platform: "",
+    strategyRequirements: "",
+  });
+
+
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+
+  //   setSubmitted(true);
+  // };
+
+
+
+const handleSubmit = async (e) => {
+
+  e.preventDefault();
+
+
+  // Prevent double submit
+  if (loading) {
+    return;
+  }
+
+
+  setError("");
+
+
+  // ----------------------------
+  // Check market
+  // ----------------------------
+
+  if (!market) {
+    setError(
+      "Please select a market."
+    );
+
+    return;
+  }
+
+
+  // ----------------------------
+  // Check Forex platform
+  // ----------------------------
+
+  if (
+    market === "forex" &&
+    !formData.platform
+  ) {
+    setError(
+      "Please select MT4 or MT5."
+    );
+
+    return;
+  }
+
+
+  const scriptUrl =
+    import.meta.env
+      .VITE_GOOGLE_SCRIPT_URL;
+
+
+  if (!scriptUrl) {
+
+    setError(
+      "Google Script URL is not configured."
+    );
+
+    return;
+  }
+
+
+  const payload = {
+
+    fullName:
+      formData.fullName.trim(),
+
+    email:
+      formData.email.trim(),
+
+    phone:
+      formData.phone.trim(),
+
+    market:
+      market === "forex"
+        ? "Forex"
+        : "Indian Market",
+
+    platform:
+      market === "forex"
+        ? formData.platform
+        : "",
+
+    strategyRequirements:
+      formData
+        .strategyRequirements
+        .trim(),
+  };
+
+
+  try {
+
+    setLoading(true);
+
+
+    const response =
+      await fetch(
+        scriptUrl,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "text/plain;charset=utf-8",
+          },
+
+          body:
+            JSON.stringify(
+              payload
+            ),
+
+          redirect: "follow",
+        }
+      );
+
+
+    const result =
+      await response.json();
+
+
+    console.log(
+      "Google Sheet response:",
+      result
+    );
+
+
+    if (!result.success) {
+
+      throw new Error(
+        result.message ||
+        "Submission failed"
+      );
+    }
+
+
+    // SUCCESS
 
     setSubmitted(true);
-  };
+
+
+    // Clear form
+
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      platform: "",
+      strategyRequirements: "",
+    });
+
+
+    setMarket("");
+
+
+  } catch (err) {
+
+    console.error(err);
+
+
+    setError(
+      err.message ||
+      "Unable to submit strategy request."
+    );
+
+  } finally {
+
+    setLoading(false);
+  }
+};
+
+
+
+
+
+
+
+
+
+const handleChange = (e) => {
+
+  const {
+    name,
+    value,
+  } = e.target;
+
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
+
+
+
+
 
   return (
     <section className="contact-section" id="contact">
@@ -290,11 +510,23 @@ function Contact() {
 
                             <i className="bi bi-person-fill"></i>
 
-                            <input
+                            {/* <input
                               type="text"
                               placeholder="Enter your full name"
                               required
-                            />
+                            /> */}
+
+
+<input
+  type="text"
+  name="fullName"
+  value={formData.fullName}
+  onChange={handleChange}
+  placeholder="Enter your full name"
+  required
+/>
+
+
 
                           </div>
 
@@ -317,11 +549,24 @@ function Contact() {
 
                             <i className="bi bi-envelope"></i>
 
-                            <input
+                            {/* <input
                               type="email"
                               placeholder="Enter your email"
                               required
-                            />
+                            /> */}
+
+<input
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  placeholder="Enter your email"
+  required
+/>
+
+
+
+
 
                           </div>
 
@@ -344,11 +589,24 @@ function Contact() {
 
                             <i className="bi bi-telephone"></i>
 
-                            <input
+                            {/* <input
                               type="tel"
                               placeholder="Enter your phone number"
                               required
-                            />
+                            /> */}
+
+<input
+  type="tel"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  placeholder="Enter your phone number"
+  required
+/>
+
+
+
+
 
                           </div>
 
@@ -393,6 +651,8 @@ function Contact() {
                                   ? "market-option active"
                                   : "market-option"
                               }
+                              // onClick={() => setMarket("indian")}
+
                               onClick={() => setMarket("indian")}
                             >
 
@@ -450,7 +710,14 @@ function Contact() {
 
                                 <i className="bi bi-building"></i>
 
-                                <select required>
+                                {/* <select required> */}
+
+                                <select
+  name="platform"
+  value={formData.platform}
+  onChange={handleChange}
+  required
+>
                                   <option value="">
                                     Select broker
                                   </option>
@@ -600,11 +867,24 @@ function Contact() {
                             <span>*</span>
                           </label>
 
-                          <textarea
+                          {/* <textarea
                             rows="5"
                             placeholder="Explain your entry conditions, exit conditions, stop loss, target, indicators, timeframe, or any other trading logic..."
                             required
-                          ></textarea>
+                          ></textarea> */}
+
+
+
+                          <textarea
+  name="strategyRequirements"
+  value={
+    formData.strategyRequirements
+  }
+  onChange={handleChange}
+  rows="5"
+  placeholder="Explain your entry conditions, exit conditions, stop loss, target, indicators, timeframe, or any other trading logic..."
+  required
+></textarea>
 
                           <small>
                             You don&apos;t need to write technical code.
@@ -677,6 +957,21 @@ function Contact() {
                   </label>
 
 
+{error && (
+  <div className="contact-form-error">
+
+    <i className="bi bi-exclamation-circle"></i>
+
+    <span>{error}</span>
+
+  </div>
+)}
+
+
+
+
+
+
                   {/* ===============================
                       SUBMIT
                   ================================ */}
@@ -720,12 +1015,37 @@ function Contact() {
                     you regarding the next steps.
                   </p>
 
-                  <button
+                  {/* <button
                     onClick={() => setSubmitted(false)}
                     className="contact-new-enquiry"
                   >
                     Submit Another Enquiry
-                  </button>
+                  </button> */}
+
+
+<button
+  type="submit"
+  className="contact-submit-btn"
+  disabled={loading}
+>
+
+  {loading ? (
+    <>
+      <span className="contact-spinner"></span>
+      Submitting...
+    </>
+  ) : (
+    <>
+      Submit Strategy Enquiry
+
+      <i className="bi bi-arrow-right"></i>
+    </>
+  )}
+
+</button>y
+
+
+
 
                 </div>
 

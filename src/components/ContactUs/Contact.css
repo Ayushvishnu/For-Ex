@@ -1,3 +1,92 @@
+.contact-form-error {
+  margin: 12px 0;
+
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(220, 53, 69, 0.25);
+
+  background: rgba(220, 53, 69, 0.08);
+
+  color: #ff8f99;
+
+  font-size: 11px;
+}
+
+.contact-form-error i {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+.contact-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+.contact-spinner {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid
+    rgba(0, 0, 0, 0.25);
+
+  border-top-color: #000;
+
+  border-radius: 50%;
+
+  animation:
+    contact-spin
+    0.7s linear infinite;
+}
+
+
+@keyframes contact-spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================
    CONTACT SECTION
 ========================================= */
