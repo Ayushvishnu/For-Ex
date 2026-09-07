@@ -22,7 +22,7 @@ function Home() {
       {/* BACKGROUND VIDEO */}
       <div className="home-video-bg">
         <video autoPlay loop muted playsInline preload="auto">
-          {/* <source src="/public/images/circlenet.mp4" type="video/mp4" /> */}
+          <source src="/public/images/circlenet.mp4" type="video/mp4" />
           {/* <source src="/public/images/goldnet.mp4" type="video/mp4" /> */}
         </video>
 
