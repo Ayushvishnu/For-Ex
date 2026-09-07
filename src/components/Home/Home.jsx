@@ -1,13 +1,9 @@
-
-
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-
 function Home() {
-
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -22,7 +18,7 @@ function Home() {
       {/* BACKGROUND VIDEO */}
       <div className="home-video-bg">
         <video autoPlay loop muted playsInline preload="auto">
-          <source src="/public/images/circlenet.mp4" type="video/mp4" />
+          {/* <source src="/public/images/circlenet.mp4" type="video/mp4" /> */}
           {/* <source src="/public/images/goldnet.mp4" type="video/mp4" /> */}
         </video>
 
@@ -40,7 +36,7 @@ function Home() {
             data-aos-once="false"
           >
             {/* FOREX · ALGO · TECHNOLOGY */}
-            FOREX • ALGO TRADING • STRATEGY DEVELOPMENT
+            FOREX • MARKET ANALYSIS • TRADING EDUCATION
           </div>
 
           <h1
@@ -50,13 +46,14 @@ function Home() {
             data-aos-once="false"
             data-aos-mirror="true"
           >
-            Turn Your Trading Ideas
+            {/* Turn Your Trading Ideas */}
+            Trade Forex With
             <br />
             <div data-aos="fade-right">
               {" "}
-              Into <span>Intelligent Algo</span>
+              Knowledge, <span>Strategy &</span>
               <br />
-              <span>Strategies</span>
+              <span>Confidence</span>
             </div>
           </h1>
 
@@ -66,9 +63,9 @@ function Home() {
             data-aos-delay="200"
             data-aos-once="false"
           >
-            Transform your Forex trading ideas into structured automated
-            strategies for MT4 and MT5 — from strategy logic and development to
-            testing and deployment.
+            Explore the Forex market with practical insights,market analysis and
+            structured trading strategies designed to help you make more
+            informed trading decisions
           </p>
 
           <div className="hero-buttons">
@@ -87,6 +84,7 @@ function Home() {
             >
               <i className="bi bi-arrow-right"></i>
               Start Your Strategy
+              {/* Explore Forex Trading */}
             </button>
             <button
               className="secondary-btn"
@@ -96,21 +94,24 @@ function Home() {
               data-aos-once="false"
             >
               <i className="bi bi-play-fill"></i>
-              How It Works
+              {/* How It Works */}
+              Learn About Forex
             </button>
           </div>
 
           <div className="markets">
-            <span>XAU/USD</span>
             <span>EUR/USD</span>
             <span>GBP/USD</span>
             <span>USD/JPY</span>
-            <span>GOLD</span>
-            <span>BTC/USD</span>
+            <span>USD/CHF</span>
+            <span>AUD/USD</span>
+            <span>USD/CAD</span>
+            <span>NZD/USD</span>
 
+            {/* <span>GOLD</span>
             <span>MT4</span>
             <span>MT5</span>
-            <span>AUTOMATION</span>
+            <span>AUTOMATION</span> */}
           </div>
         </div>
 
@@ -120,28 +121,28 @@ function Home() {
           <div className="flow-row top-row">
             <div className="flow-box">
               <i className="bi bi-lightbulb-fill"></i>
-              Trading Idea
+              MARKET ANALYSIS
             </div>
 
             <div className="line"></div>
 
             <div className="flow-box">
               <i className="bi bi-gear-fill"></i>
-              Strategy Logic
+              TRADING STRATEGY
             </div>
           </div>
 
           <div className="flow-row middle-row">
             <div className="flow-box active-flow">
               <i className="bi bi-code-slash"></i>
-              Algorithm
+              RISK MANAGEMENT
             </div>
 
             <div className="line"></div>
 
             <div className="flow-box">
               <i className="bi bi-beaker-fill"></i>
-              Test
+              MARKET REVIEW
             </div>
 
             <div className="line small-line"></div>
@@ -150,7 +151,7 @@ function Home() {
           <div className="flow-row bottom-row">
             <div className="flow-box execute-box">
               <i className="bi bi-play-fill"></i>
-              Execute
+              TRADE DECISION
             </div>
           </div>
         </div>
@@ -164,7 +165,7 @@ function Home() {
             <i className="bi bi-megaphone-fill"></i>
           </div>
 
-          <span>Strategy Consultation</span>
+          <span>Forex Guidance</span>
         </div>
 
         <div className="feature">
@@ -172,7 +173,7 @@ function Home() {
             <i className="bi bi-cpu-fill"></i>
           </div>
 
-          <span>Custom Algo Dev</span>
+          <span>Forex Market Analysis</span>
         </div>
 
         <div className="feature">
@@ -180,7 +181,7 @@ function Home() {
             <i className="bi bi-globe2"></i>
           </div>
 
-          <span>Forex & Indian Markets</span>
+          <span>Forex & Currency Pairs</span>
         </div>
 
         <div className="feature">
@@ -188,7 +189,7 @@ function Home() {
             <i className="bi bi-bar-chart-steps"></i>
           </div>
 
-          <span>MT4 / MT5</span>
+          <span>Trading Platforms</span>
         </div>
 
         <div className="feature">
@@ -196,7 +197,7 @@ function Home() {
             <i className="bi bi-headset"></i>
           </div>
 
-          <span>Professional Support</span>
+          <span>Trading Support</span>
         </div>
       </div>
     </main>
