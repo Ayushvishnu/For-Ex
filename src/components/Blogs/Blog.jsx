@@ -78,7 +78,7 @@ function Blog() {
 
                 <div className="blog-image-overlay"></div>
 
-                <div className="blog-category">FOREX TRADING</div>
+                <div className="blog-category">FOREX · TRADING PLATFORM</div>
               </div>
 
               {/* CONTENT */}
@@ -95,11 +95,13 @@ function Blog() {
                   </span>
                 </div>
 
-                <h3>Understanding Forex Market Movements</h3>
+                <h3>MT4 vs MT5: Which Trading Platform Should You Choose?</h3>
 
                 <p>
-                  Learn how currency prices move and what traders look at when
-                  analysing the Forex market.
+                  Explore the key differences between MetaTrader 4 and
+                  MetaTrader 5, including trading tools, strategy automation,
+                  backtesting, and how each platform supports algorithmic
+                  trading.
                 </p>
 
                 <div className="blog-author-row">
@@ -140,20 +142,20 @@ function Blog() {
                           src="/images/blog2.jpg"
                           alt="Forex trading strategy"
                         /> */}
+                        
                       </div>
                     </div>
 
                     <div className="col-8">
                       <div className="small-blog-content">
-                        <div className="small-blog-category">
-                          FOREX ANALYSIS
-                        </div>
+                        <div className="small-blog-category">METATRADER 4</div>
 
-                        <h4>How Currency Pairs Move in the Forex Market</h4>
+                        <h4>What is MetaTrader 4 (MT4)?</h4>
 
                         <p>
-                          Understand the key factors that can influence major
-                          currency pairs and Forex market movements.
+                          MT4 supports automated trading through Expert Advisors
+                          (EAs), which can execute predefined trading rules
+                          automatically.
                         </p>
 
                         <div className="small-blog-footer">
@@ -189,18 +191,16 @@ function Blog() {
 
                     <div className="col-8">
                       <div className="small-blog-content">
-                        <div className="small-blog-category">
-                          TRADING STRATEGIES
-                        </div>
+                        <div className="small-blog-category">METATRADER 5 </div>
 
-                        <h4>
-                          Forex Trading Strategies for Different Market
-                          Conditions
-                        </h4>
+                        <h4>What is MetaTrader 5 (MT5)?</h4>
 
                         <p>
-                          Learn how traders use different approaches based on
-                          market trends, price movements and risk levels.
+                          MetaTrader 5 (MT5) is a newer multi-asset trading
+                          platform designed for manual and algorithmic trading.
+                          It provides more advanced tools and capabilities than
+                          MT4 in several areas, although the markets available
+                          to a trader depend on their broker.
                         </p>
 
                         <div className="small-blog-footer">
@@ -223,7 +223,7 @@ function Blog() {
             BOTTOM CTA
         ========================== */}
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12">
             <div className="blog-bottom">
               <div>
@@ -243,7 +243,7 @@ function Blog() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

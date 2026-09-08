@@ -181,7 +181,7 @@ function FAQ() {
 
         {/* BOTTOM CTA */}
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12">
             <div className="faq-bottom">
               <div>
@@ -200,7 +200,7 @@ function FAQ() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

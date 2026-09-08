@@ -83,7 +83,9 @@ function Navbar() {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "testimonials", label: "Testimonials" },
+    // { id: "testimonials", label: "Testimonials" },
+        { id: "service", label: "Services" },
+
 
     { id: "blog", label: "Blog" },
     { id: "faq", label: "FAQ" },

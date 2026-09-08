@@ -1,0 +1,471 @@
+/* =========================================
+   SERVICE SECTION
+========================================= */
+
+.service-section {
+  position: relative;
+  width: 100%;
+
+  padding: 100px 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(212, 175, 55, 0.04),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(212, 175, 55, 0.025),
+      transparent 30%
+    ),
+    #000000;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.service-tag {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  padding: 7px 16px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  background-color: rgba(212, 175, 55, 0.04);
+
+  background-image: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.service-heading {
+  margin: 0;
+
+  color: #f5f3ef;
+
+  font-size: clamp(36px, 4vw, 50px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -1.3px;
+}
+
+
+.service-heading span {
+  background: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.service-description {
+  max-width: 760px;
+
+  margin: 18px auto 0;
+
+  color: #96918c;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   SERVICE ROW
+========================================= */
+
+.service-row {
+  margin-top: 55px;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  position: relative;
+
+  height: 100%;
+
+  padding: 34px;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  border: 1px solid rgba(212, 175, 55, 0.13);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(26, 23, 20, 0.97),
+      rgba(9, 9, 9, 0.99)
+    );
+
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.service-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(212, 175, 55, 0.34);
+
+  box-shadow:
+    0 30px 65px rgba(0, 0, 0, 0.48),
+    0 0 30px rgba(212, 175, 55, 0.035);
+}
+
+
+/* subtle gold top line */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+
+  width: 80%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(247, 226, 125, 0.55),
+    transparent
+  );
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.service-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  background: rgba(212, 175, 55, 0.06);
+
+  font-size: 23px;
+}
+
+
+.service-icon i {
+  background: linear-gradient(
+    135deg,
+    #8C6A1D 0%,
+    #C9A227 25%,
+    #F7E27D 50%,
+    #D4AF37 70%,
+    #9A7416 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.service-number {
+  font-size: 35px;
+
+  font-weight: 800;
+
+  color: rgba(212, 175, 55, 0.11);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.service-card h3 {
+  margin: 0 0 14px;
+
+  color: #f3f0ec;
+
+  font-size: 24px;
+
+  font-weight: 750;
+
+  line-height: 1.3;
+}
+
+
+.service-card-description {
+  margin: 0;
+
+  color: #918c87;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.service-list {
+  margin-top: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+.service-list-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: #bbb5af;
+
+  font-size: 13px;
+}
+
+
+.service-list-item i {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(212, 175, 55, 0.06);
+
+  border: 1px solid rgba(212, 175, 55, 0.14);
+
+  color: #d4af37;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+========================================= */
+
+.service-bottom-text {
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(212, 175, 55, 0.08);
+
+  color: #6f6b67;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .service-section {
+    padding: 85px 0;
+  }
+
+
+  .service-row {
+    margin-top: 45px;
+  }
+
+
+  .service-card {
+    padding: 30px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .service-section {
+    padding: 70px 0;
+  }
+
+
+  .service-heading {
+    font-size: 35px;
+  }
+
+
+  .service-description {
+    font-size: 14px;
+  }
+
+
+  .service-card {
+    padding: 27px 24px;
+
+    border-radius: 22px;
+  }
+
+
+  .service-card h3 {
+    font-size: 21px;
+  }
+
+
+  .service-card-description {
+    font-size: 13px;
+  }
+
+
+  .service-list-item {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+  .service-section {
+    padding: 60px 0;
+  }
+
+
+  .service-heading {
+    font-size: 31px;
+  }
+
+
+  .service-heading span {
+    display: block;
+
+    margin-top: 4px;
+  }
+
+
+  .service-card {
+    padding: 24px 18px;
+  }
+
+
+  .service-card-top {
+    margin-bottom: 22px;
+  }
+
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 20px;
+  }
+
+
+  .service-number {
+    font-size: 29px;
+  }
+
+
+  .service-list {
+    margin-top: 22px;
+
+    gap: 11px;
+  }
+
+
+  .service-bottom-text {
+    margin-top: 22px;
+
+    padding-top: 16px;
+  }
+
+}

@@ -20,6 +20,9 @@ function Home() {
         <video autoPlay loop muted playsInline preload="auto">
           {/* <source src="/public/images/circlenet.mp4" type="video/mp4" /> */}
           {/* <source src="/public/images/goldnet.mp4" type="video/mp4" /> */}
+                    <source src="/public/images/bgvdo.mp4" type="video/mp4" />
+
+
         </video>
 
         {/* Dark overlay */}
@@ -83,7 +86,7 @@ function Home() {
               }
             >
               <i className="bi bi-arrow-right"></i>
-              Start Your Strategy
+              Build your Strategy
               {/* Explore Forex Trading */}
             </button>
             <button
@@ -100,7 +103,7 @@ function Home() {
           </div>
 
           <div className="markets">
-            <span>EUR/USD</span>
+            <span>XE/USD</span>
             <span>GBP/USD</span>
             <span>USD/JPY</span>
             <span>USD/CHF</span>
@@ -159,7 +162,7 @@ function Home() {
 
       {/* FEATURES */}
 
-      <div className="features-container">
+      {/* <div className="features-container">
         <div className="feature">
           <div className="feature-icon">
             <i className="bi bi-megaphone-fill"></i>
@@ -199,7 +202,7 @@ function Home() {
 
           <span>Trading Support</span>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

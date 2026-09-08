@@ -189,7 +189,9 @@
 
   margin: 0 auto;
 
-  padding: 0 22px 55px;
+  /* padding: 0 22px 55px; */
+    margin-left: 73px;
+
 
   display: grid;
 
