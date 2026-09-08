@@ -755,9 +755,11 @@
 @media (max-width: 767px) {
 
   .blog-section {
-    padding: 70px 0;
+    padding: 40px 0;
   }
 
+  .featured-blog {
+margin-top: 13px;  }
 
   .blog-heading {
     font-size: 35px;
