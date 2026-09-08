@@ -1032,7 +1032,7 @@
 @media (max-width: 991px) {
 
   .contact-section {
-    padding: 90px 0;
+    padding: 30px 0;
   }
 
 
@@ -1040,6 +1040,7 @@
     position: relative;
 
     top: auto;
+    margin-top: 13px;
   }
 
 }

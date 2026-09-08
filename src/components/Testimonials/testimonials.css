@@ -666,7 +666,9 @@
   .small-testimonial {
     min-height: auto;
   }
-
+.testimonial-card{
+  margin-top: 13px;
+}
 }
 
 

@@ -452,6 +452,8 @@ background: linear-gradient(
 
   .algo-info-card {
     min-height: auto;
+            margin-top: 20px;
+
   }
 
 }

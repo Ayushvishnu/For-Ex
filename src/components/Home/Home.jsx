@@ -26,6 +26,8 @@ function Home() {
         </video>
 
         {/* Dark overlay */}
+          <div className="home-video-overlay"></div>
+
       </div>
 
       <div className="home-container">

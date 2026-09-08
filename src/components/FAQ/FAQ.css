@@ -669,7 +669,7 @@
 @media (max-width: 991px) {
 
   .faq-section {
-    padding: 90px 0;
+    padding: 70px 0;
   }
 
 
@@ -682,6 +682,9 @@
     position: relative;
 
     top: 0;
+  }
+  .faq-side-card{
+    margin-top: 13px;
   }
 
 }

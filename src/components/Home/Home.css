@@ -202,7 +202,28 @@
   min-height: 450px;
 }
 
+.home-video-overlay {
+  position: absolute;
 
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.88) 30%,
+      rgba(0, 0, 0, 0.72) 55%,
+      rgba(0, 0, 0, 0.58) 75%,
+      rgba(0, 0, 0, 0.48) 100%
+    );
+}
 
 
 .features-container {
@@ -643,6 +664,10 @@
 
   .nav-links {
     display: none;
+  }
+  .home{
+        min-height: 85vh;
+
   }
 
 }
