@@ -15,7 +15,8 @@ function Blog() {
               data-aos="fade-up"
               data-aos-duration="700"
             >
-              FOREX MARKET INSIGHTS{" "}
+              {/* FOREX MARKET INSIGHTS{" "} */}
+              BLOG
             </div>
 
             <h2
