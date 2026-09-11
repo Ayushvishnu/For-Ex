@@ -58,20 +58,18 @@ function Service() {
               <h3>Forex Algo Development</h3>
 
               <p className="service-card-description">
-                We help convert Forex trading ideas into structured algorithmic
-                strategies for automated and rule-based execution across
-                supported trading platforms.
+             We turn your trading strategy into a custom Expert Advisor, coding your rules into automated execution with complete MT4 or MT5 setup and configuration.
               </p>
 
               <div className="service-platform-images">
                 <div className="platform-image-card">
-                  <img src="/images/mt4.jpeg" alt="MetaTrader 4" />
+                  <img src="/images/4.png" alt="MetaTrader 4" />
 
                   <span>MT4</span>
                 </div>
 
                 <div className="platform-image-card">
-                  <img src="/images/mt5.jpeg" alt="MetaTrader 5" />
+                  <img src="/images/5.png" alt="MetaTrader 5" />
 
                   <span>MT5</span>
                 </div>
@@ -82,35 +80,36 @@ function Service() {
                   <i className="bi bi-check2"></i>
                   <span>MT4 & MT5 Strategy Development</span>
                 </div>
+ 
 
-                {/* <div className="service-list-item">
+                <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
-                    Custom Entry & Exit Logic
+                   Trade Automation
                   </span>
                 </div>
 
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
-                    Stop Loss & Target Automation
+                  Risk Management
                   </span>
                 </div>
 
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
-                    Indicator-Based Strategies
+                   Testing & Configuration
                   </span>
                 </div>
 
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
-                    Risk Management Rules
+                  Strategy Coding
                   </span>
                 </div>
-
+{/* 
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
@@ -162,24 +161,24 @@ function Service() {
                 requirements.
               </p>
 
-              {/* <div className="service-platform-images"> */}
+              <div className="service-platform-images">
 
               <div className="platform-image-card">
-                <img src="/images/indianmarket.jpeg" alt="MetaTrader 4" />
+                <img src="/images/nse.png" alt="MetaTrader 4" />
 
                 {/* <span>MT4</span> */}
               </div>
 
-              {/* <div className="platform-image-card">
+              <div className="platform-image-card">
     <img
-      src="/images/mt5.jpeg"
+      src="/images/bse.png"
       alt="MetaTrader 5"
     />
 
-    <span>MT5</span>
-  </div> */}
+    {/* <span>MT5</span> */}
+  </div>
 
-              {/* </div> */}
+              </div>
 
               <div className="service-list">
                 <div className="service-list-item">

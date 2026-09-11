@@ -6,29 +6,29 @@ function FAQ() {
 
   const faqData = [
     {
-      question: "What is Forex trading?",
+      question: "Can you build an algo from my existing trading strategy?",
       answer:
-        "Forex trading is the buying and selling of currency pairs such as EUR/USD and GBP/USD. Traders study market movements and other factors before making trading decisions.",
+        "Yes. We analyse your trading strategy, understand its rules and conditions, and build them into a custom algorithm designed for automated execution.",
     },
     {
-      question: "How does the Forex market work?",
+      question: "How do you convert a trading strategy into an automated system?",
       answer:
-        "The Forex market is a global market where currencies are traded in pairs. Prices can move based on factors such as economic data, interest rates, news and market demand.",
+        "We first understand your strategy and map its trading logic, then code, test and configure the system according to your requirements.",
     },
     {
-      question: "What are currency pairs in Forex?",
+      question: "Do you develop custom Expert Advisors for MT4 and MT5?",
       answer:
-        "A currency pair shows the value of one currency against another. Major pairs include EUR/USD, GBP/USD, USD/JPY and USD/CHF.",
+        "Yes. We develop custom Expert Advisors for both MT4 and MT5 based on your trading strategy, entry and exit rules, indicators and risk parameters.",
     },
     {
-      question: "What is Forex market analysis?",
+      question: "Do you provide complete EA setup and configuration?",
       answer:
-        "Forex market analysis involves studying price movements, economic factors and market trends to better understand possible market conditions.",
+        "Yes. We can assist with the required MT4 or MT5 setup, EA installation, configuration and deployment based on your trading environment.",
     },
     {
-      question: "Is Forex trading profitable?",
+      question: "Can you automate my entry, exit and risk-management rules?",
       answer:
-        "Forex trading involves risk, and profits are never guaranteed. Market prices can change quickly, so understanding risk management and having a clear trading plan are important.",
+        "Yes. Your predefined entry, exit, stop-loss, take-profit, position-sizing and other trading rules can be incorporated into the automated system.",
     },
     // {
     //   question: "What information should I provide for development?",

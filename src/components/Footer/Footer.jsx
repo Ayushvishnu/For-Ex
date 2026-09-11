@@ -38,7 +38,7 @@ function Footer() {
 
               {/* SOCIAL ICONS */}
 
-              <div className="footer-socials">
+              {/* <div className="footer-socials">
 
                 <a href="#" aria-label="LinkedIn">
                   <i className="bi bi-linkedin"></i>
@@ -56,7 +56,7 @@ function Footer() {
                   <i className="bi bi-facebook"></i>
                 </a>
 
-              </div>
+              </div> */}
 
             </div>
 
@@ -242,7 +242,7 @@ function Footer() {
             RISK DISCLAIMER
         ========================== */}
 
-        <div className="footer-risk">
+        {/* <div className="footer-risk">
 
           <div className="footer-risk-icon">
             <i className="bi bi-exclamation-triangle"></i>
@@ -255,7 +255,7 @@ function Footer() {
             can guarantee profitability.
           </p>
 
-        </div>
+        </div> */}
 
 
         {/* =========================

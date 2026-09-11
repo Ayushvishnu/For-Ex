@@ -101,14 +101,12 @@ function Home() {
           </div>
 
           <div className="markets">
-            <span>XE/USD</span>
-            <span>GBP/USD</span>
+            <span>XAU/USD</span> <span>GBP/USD</span>
             <span>USD/JPY</span>
             <span>USD/CHF</span>
             <span>AUD/USD</span>
             <span>USD/CAD</span>
             <span>NZD/USD</span>
-
             {/* <span>GOLD</span>
             <span>MT4</span>
             <span>MT5</span>
@@ -151,7 +149,7 @@ function Home() {
           </div>
 
           <div className="flow-row bottom-row">
-                        {/* <div className="line"></div> */}
+            {/* <div className="line"></div> */}
 
             <div className="flow-box execute-box">
               <i className="bi bi-play-fill"></i>

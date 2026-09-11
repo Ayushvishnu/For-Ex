@@ -69,12 +69,16 @@ function Blog() {
               </div> */}
 
               <div className="featured-blog-image">
-                <video
+                {/* <video
                   src="/images/goldfish.mp4"
                   autoPlay
                   muted
                   loop
                   playsInline
+                /> */}
+                 <img
+                  src="/images/4vs5.jpeg"
+                  alt="Algorithmic trading strategy"
                 />
 
                 <div className="blog-image-overlay"></div>
@@ -139,10 +143,10 @@ function Blog() {
                   <div className="row g-0 h-100">
                     <div className="col-4">
                       <div className="small-blog-image">
-                        {/* <img
-                          src="/images/blog2.jpg"
+                        <img
+                          src="/images/4.png"
                           alt="Forex trading strategy"
-                        /> */}
+                        />
                       </div>
                     </div>
 
@@ -186,10 +190,10 @@ function Blog() {
                   <div className="row g-0 h-100">
                     <div className="col-4">
                       <div className="small-blog-image">
-                        {/* <img
-                          src="/images/blog3.jpg"
+                        <img
+                          src="/images/5.png"
                           alt="MT4 and MT5 algorithmic trading"
-                        /> */}
+                        />
                       </div>
                     </div>
 
