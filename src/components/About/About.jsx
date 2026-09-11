@@ -320,7 +320,7 @@ function About() {
             RIGHT VISUAL
         ========================== */}
 
-        <div className="about-right">
+        {/* <div className="about-right">
 
           <div className="about-flow">
 
@@ -350,9 +350,6 @@ function About() {
 
           </div>
 
-          {/* =========================
-              COMPANY HIGHLIGHTS
-          ========================== */}
 
           <div className="about-highlight-card">
 
@@ -386,7 +383,7 @@ function About() {
 
           </div>
 
-        </div>
+        </div> */}
 
       </div>
     </section>

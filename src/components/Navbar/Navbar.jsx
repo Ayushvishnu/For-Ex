@@ -82,9 +82,10 @@ function Navbar() {
 
   const navItems = [
     { id: "home", label: "Home" },
+            { id: "service", label: "Services" },
+
     { id: "about", label: "About" },
     // { id: "testimonials", label: "Testimonials" },
-        { id: "service", label: "Services" },
 
 
     { id: "blog", label: "Blog" },
@@ -176,7 +177,7 @@ function Navbar() {
         >
           <i className="bi bi-rocket-takeoff-fill"></i>
 
-          <span>Enroll Now</span>
+          <span>Start your Strategy</span>
         </button>
 
 

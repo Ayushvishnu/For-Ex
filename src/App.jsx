@@ -17,10 +17,10 @@ function App() {
     <div className="bg-bgDark text-textPrimary font-sans antialiased">
       <Navbar />
       <Home />
+      <Service />
 
       <About />
       <AlgoTrading />
-      <Service />
 
       <Testimonials />
       <Blog />

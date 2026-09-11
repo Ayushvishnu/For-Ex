@@ -20,14 +20,11 @@ function Home() {
         <video autoPlay loop muted playsInline preload="auto">
           {/* <source src="/public/images/circlenet.mp4" type="video/mp4" /> */}
           {/* <source src="/public/images/goldnet.mp4" type="video/mp4" /> */}
-                    <source src="/public/images/bgvdo.mp4" type="video/mp4" />
-
-
+          <source src="/public/images/bgvdo.mp4" type="video/mp4" />
         </video>
 
         {/* Dark overlay */}
-          <div className="home-video-overlay"></div>
-
+        <div className="home-video-overlay"></div>
       </div>
 
       <div className="home-container">
@@ -126,28 +123,28 @@ function Home() {
           <div className="flow-row top-row">
             <div className="flow-box">
               <i className="bi bi-lightbulb-fill"></i>
-              MARKET ANALYSIS
+              Strategy Submission
             </div>
 
             <div className="line"></div>
 
             <div className="flow-box">
               <i className="bi bi-gear-fill"></i>
-              TRADING STRATEGY
+              Strategy Evaluation{" "}
             </div>
           </div>
 
           <div className="flow-row middle-row">
             <div className="flow-box active-flow">
               <i className="bi bi-code-slash"></i>
-              RISK MANAGEMENT
+              Algo Dev{" "}
             </div>
 
             <div className="line"></div>
 
             <div className="flow-box">
               <i className="bi bi-beaker-fill"></i>
-              MARKET REVIEW
+              Strategy Automation{" "}
             </div>
 
             <div className="line small-line"></div>
@@ -156,7 +153,7 @@ function Home() {
           <div className="flow-row bottom-row">
             <div className="flow-box execute-box">
               <i className="bi bi-play-fill"></i>
-              TRADE DECISION
+              Automated Trading{" "}
             </div>
           </div>
         </div>
