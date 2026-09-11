@@ -1,3 +1,75 @@
+.contact-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.contact-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: contactSpin 0.8s linear infinite;
+}
+
+@keyframes contactSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.selected-file-name {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  border-radius: 10px;
+
+  background: rgba(212, 175, 55, 0.05);
+
+  color: #d8d1ca;
+
+  font-size: 13px;
+}
+
+.selected-file-name i {
+  color: #d4af37;
+}
+
+
+
+
+
+
 .contact-form-error {
   margin: 12px 0;
 
