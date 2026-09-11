@@ -36,133 +36,129 @@ function Contact() {
     strategyRequirements: "",
   });
 
+  const fileToBase64 = (file) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
 
-const fileToBase64 = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
+      reader.onload = () => {
+        const result = String(reader.result || "");
 
-    reader.onload = () => {
-      const result = String(reader.result || "");
+        resolve(result.split(",")[1] || "");
+      };
 
-      resolve(result.split(",")[1] || "");
-    };
+      reader.onerror = reject;
 
-    reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
 
-    reader.readAsDataURL(file);
-  });
+  //   const handleSubmit = async (e) => {
+  //     e.preventDefault();
 
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
+  //     // Prevent double submit
+  //     if (loading) {
+  //       return;
+  //     }
 
-//     // Prevent double submit
-//     if (loading) {
-//       return;
-//     }
+  //     setError("");
 
-//     setError("");
+  //     // ----------------------------
+  //     // Check market
+  //     // ----------------------------
 
-//     // ----------------------------
-//     // Check market
-//     // ----------------------------
+  //     if (!market) {
+  //       setError("Please select a market.");
 
-//     if (!market) {
-//       setError("Please select a market.");
+  //       return;
+  //     }
 
-//       return;
-//     }
+  //     // ----------------------------
+  //     // Check Forex platform
+  //     // ----------------------------
 
-//     // ----------------------------
-//     // Check Forex platform
-//     // ----------------------------
+  //     if (market === "forex" && !formData.platform) {
+  //       setError("Please select MT4 or MT5.");
 
-//     if (market === "forex" && !formData.platform) {
-//       setError("Please select MT4 or MT5.");
+  //       return;
+  //     }
 
-//       return;
-//     }
+  //     const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
-//     const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+  //     if (!scriptUrl) {
+  //       setError("Google Script URL is not configured.");
 
-//     if (!scriptUrl) {
-//       setError("Google Script URL is not configured.");
+  //       return;
+  //     }
 
-//       return;
-//     }
+  // let fileName = "";
+  // let fileData = "";
+  // let fileMimeType = "";
 
+  // if (selectedFile) {
+  //   fileName = selectedFile.name;
+  //   fileMimeType = selectedFile.type;
+  //   fileData = await fileToBase64(selectedFile);
+  // }
 
-// let fileName = "";
-// let fileData = "";
-// let fileMimeType = "";
+  //     const payload = {
+  //       fullName: formData.fullName.trim(),
 
-// if (selectedFile) {
-//   fileName = selectedFile.name;
-//   fileMimeType = selectedFile.type;
-//   fileData = await fileToBase64(selectedFile);
-// }
+  //       email: formData.email.trim(),
 
+  //       phone: formData.phone.trim(),
 
+  //       market: market === "forex" ? "Forex" : "Indian Market",
 
-//     const payload = {
-//       fullName: formData.fullName.trim(),
+  //       platform: market === "forex" ? formData.platform : "",
 
-//       email: formData.email.trim(),
+  //       strategyRequirements: formData.strategyRequirements.trim(),
+  //     };
 
-//       phone: formData.phone.trim(),
+  //     try {
+  //       setLoading(true);
 
-//       market: market === "forex" ? "Forex" : "Indian Market",
+  //       const response = await fetch(scriptUrl, {
+  //         method: "POST",
 
-//       platform: market === "forex" ? formData.platform : "",
+  //         headers: {
+  //           "Content-Type": "text/plain;charset=utf-8",
+  //         },
 
-//       strategyRequirements: formData.strategyRequirements.trim(),
-//     };
+  //         body: JSON.stringify(payload),
 
-//     try {
-//       setLoading(true);
+  //         redirect: "follow",
+  //       });
 
-//       const response = await fetch(scriptUrl, {
-//         method: "POST",
+  //       const result = await response.json();
 
-//         headers: {
-//           "Content-Type": "text/plain;charset=utf-8",
-//         },
+  //       console.log("Google Sheet response:", result);
 
-//         body: JSON.stringify(payload),
+  //       if (!result.success) {
+  //         throw new Error(result.message || "Submission failed");
+  //       }
 
-//         redirect: "follow",
-//       });
+  //       // SUCCESS
 
-//       const result = await response.json();
+  //       setSubmitted(true);
 
-//       console.log("Google Sheet response:", result);
+  //       // Clear form
 
-//       if (!result.success) {
-//         throw new Error(result.message || "Submission failed");
-//       }
+  //       setFormData({
+  //         fullName: "",
+  //         email: "",
+  //         phone: "",
+  //         platform: "",
+  //         strategyRequirements: "",
+  //       });
 
-//       // SUCCESS
+  //       setMarket("");
+  //     } catch (err) {
+  //       console.error(err);
 
-//       setSubmitted(true);
-
-//       // Clear form
-
-//       setFormData({
-//         fullName: "",
-//         email: "",
-//         phone: "",
-//         platform: "",
-//         strategyRequirements: "",
-//       });
-
-//       setMarket("");
-//     } catch (err) {
-//       console.error(err);
-
-//       setError(err.message || "Unable to submit strategy request.");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
+  //       setError(err.message || "Unable to submit strategy request.");
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
   // const handleChange = (e) => {
   //   const { name, value } = e.target;
@@ -173,160 +169,134 @@ const fileToBase64 = (file) =>
   //   }));
   // };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  if (loading) {
-    return;
-  }
-
-  setError("");
-
-  if (!market) {
-    setError("Please select a market.");
-    return;
-  }
-
-  if (market === "forex" && !formData.platform) {
-    setError("Please select MT4 or MT5.");
-    return;
-  }
-
-  if (market === "indian" && !formData.brokerName) {
-    setError("Please select a broker.");
-    return;
-  }
-
-  if (
-    market === "indian" &&
-    formData.brokerName === "Other" &&
-    !formData.otherBrokerName.trim()
-  ) {
-    setError("Please enter broker name.");
-    return;
-  }
-
-  const scriptUrl =
-    import.meta.env.VITE_GOOGLE_SCRIPT_URL;
-
-  if (!scriptUrl) {
-    setError("Google Script URL is not configured.");
-    return;
-  }
-
-  try {
-    setLoading(true);
-
-    let fileName = "";
-    let fileData = "";
-    let fileMimeType = "";
-
-    if (selectedFile) {
-      fileName = selectedFile.name;
-      fileMimeType = selectedFile.type;
-      fileData = await fileToBase64(selectedFile);
+    if (loading) {
+      return;
     }
 
-    const finalBrokerName =
-      market === "indian"
-        ? formData.brokerName === "Other"
-          ? formData.otherBrokerName.trim()
-          : formData.brokerName
-        : "";
+    setError("");
 
-    const payload = {
-      fullName: formData.fullName.trim(),
-
-      email: formData.email.trim(),
-
-      phone: formData.phone.trim(),
-
-      market:
-        market === "forex"
-          ? "Forex"
-          : "Indian Market",
-
-      brokerName: finalBrokerName,
-
-      platform:
-        market === "forex"
-          ? formData.platform
-          : "",
-
-      strategyRequirements:
-        formData.strategyRequirements.trim(),
-
-      fileName,
-      fileData,
-      fileMimeType,
-    };
-
-    console.log("Submitting payload:", {
-      ...payload,
-      fileData: fileData
-        ? `${fileData.length} characters`
-        : "",
-    });
-
-    const response = await fetch(scriptUrl, {
-      method: "POST",
-
-      headers: {
-        "Content-Type":
-          "text/plain;charset=utf-8",
-      },
-
-      body: JSON.stringify(payload),
-
-      redirect: "follow",
-    });
-
-    const result = await response.json();
-
-    console.log(
-      "Google Sheet response:",
-      result
-    );
-
-    if (!result.success) {
-      throw new Error(
-        result.message ||
-          "Submission failed"
-      );
+    if (!market) {
+      setError("Please select a market.");
+      return;
     }
 
-    setSubmitted(true);
+    if (market === "forex" && !formData.platform) {
+      setError("Please select MT4 or MT5.");
+      return;
+    }
 
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      brokerName: "",
-      otherBrokerName: "",
-      platform: "",
-      strategyRequirements: "",
-    });
+    if (market === "indian" && !formData.brokerName) {
+      setError("Please select a broker.");
+      return;
+    }
 
-    setSelectedFile(null);
+    if (
+      market === "indian" &&
+      formData.brokerName === "Other" &&
+      !formData.otherBrokerName.trim()
+    ) {
+      setError("Please enter broker name.");
+      return;
+    }
 
-    setMarket("");
+    const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
-  } catch (err) {
-    console.error(err);
+    if (!scriptUrl) {
+      setError("Google Script URL is not configured.");
+      return;
+    }
 
-    setError(
-      err.message ||
-        "Unable to submit strategy request."
-    );
+    try {
+      setLoading(true);
 
-  } finally {
-    setLoading(false);
-  }
-};
+      let fileName = "";
+      let fileData = "";
+      let fileMimeType = "";
 
+      if (selectedFile) {
+        fileName = selectedFile.name;
+        fileMimeType = selectedFile.type;
+        fileData = await fileToBase64(selectedFile);
+      }
 
+      const finalBrokerName =
+        market === "indian"
+          ? formData.brokerName === "Other"
+            ? formData.otherBrokerName.trim()
+            : formData.brokerName
+          : "";
+
+      const payload = {
+        fullName: formData.fullName.trim(),
+
+        email: formData.email.trim(),
+
+        phone: formData.phone.trim(),
+
+        market: market === "forex" ? "Forex" : "Indian Market",
+
+        brokerName: finalBrokerName,
+
+        platform: market === "forex" ? formData.platform : "",
+
+        strategyRequirements: formData.strategyRequirements.trim(),
+
+        fileName,
+        fileData,
+        fileMimeType,
+      };
+
+      console.log("Submitting payload:", {
+        ...payload,
+        fileData: fileData ? `${fileData.length} characters` : "",
+      });
+
+      const response = await fetch(scriptUrl, {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+
+        body: JSON.stringify(payload),
+
+        redirect: "follow",
+      });
+
+      const result = await response.json();
+
+      console.log("Google Sheet response:", result);
+
+      if (!result.success) {
+        throw new Error(result.message || "Submission failed");
+      }
+
+      setSubmitted(true);
+
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        brokerName: "",
+        otherBrokerName: "",
+        platform: "",
+        strategyRequirements: "",
+      });
+
+      setSelectedFile(null);
+
+      setMarket("");
+    } catch (err) {
+      console.error(err);
+
+      setError(err.message || "Unable to submit strategy request.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleMarketChange = (selectedMarket) => {
     setMarket(selectedMarket);
@@ -507,13 +477,15 @@ const handleSubmit = async (e) => {
                 </div>
               </div>
 
-              <button className="whatsapp-btn"
-               onClick={() =>
-    window.open(
-      "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
-      "_blank"
-    )
-  }>
+              <button
+                className="whatsapp-btn"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
+                    "_blank",
+                  )
+                }
+              >
                 <i className="bi bi-whatsapp"></i>
                 Chat on WhatsApp
               </button>
@@ -530,7 +502,7 @@ const handleSubmit = async (e) => {
               </div>
 
               <div className="location-map">
-                <iframe
+                {/* <iframe
                   src="https://www.google.com/maps?q=Calicut%2C%20Kerala%2C%20India&output=embed&layer=s"
                   width="100%"
                   height="250"
@@ -539,13 +511,24 @@ const handleSubmit = async (e) => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Calicut Location"
+                ></iframe> */}
+
+                <iframe
+                  title="Greeks Labs Location"
+                  src="https://www.google.com/maps?q=11.2477428,75.7929101&z=17&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
 
                 <div className="map-gold-overlay"></div>
               </div>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Calicut%2C%20Kerala%2C%20India"
+                href="https://www.google.com/maps/search/?api=1&query=11.2477428,75.7929101"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="map-view-btn"
@@ -992,9 +975,10 @@ const handleSubmit = async (e) => {
                       STRATEGY DETAILS
                   ================================ */}
 
-                  <div className="contact-form-section"
+                  <div
+                    className="contact-form-section"
                     id="strategy-form-section"
->
+                  >
                     <div className="form-section-title">
                       <span>03</span>
                       Strategy Requirement
@@ -1097,25 +1081,23 @@ const handleSubmit = async (e) => {
                     <i className="bi bi-arrow-right"></i>
                   </button> */}
 
-<button
-  type="submit"
-  className="contact-submit-btn"
-  disabled={loading}
->
-  {loading ? (
-    <>
-      <span className="contact-spinner"></span>
-      Submitting...
-    </>
-  ) : (
-    <>
-      Submit Strategy Enquiry
-      <i className="bi bi-arrow-right"></i>
-    </>
-  )}
-</button>
-
-                  
+                  <button
+                    type="submit"
+                    className="contact-submit-btn"
+                    disabled={loading}
+                  >
+                    {loading ? (
+                      <>
+                        <span className="contact-spinner"></span>
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        Submit Strategy Enquiry
+                        <i className="bi bi-arrow-right"></i>
+                      </>
+                    )}
+                  </button>
                 </form>
               ) : (
                 /* ===============================
@@ -1148,21 +1130,19 @@ const handleSubmit = async (e) => {
                   </button> */}
 
                   <button
-                     type="button"
+                    type="button"
                     className="contact-submit-btn"
                     disabled={loading}
-                      onClick={() => {
-    setSubmitted(false);
+                    onClick={() => {
+                      setSubmitted(false);
 
-    setTimeout(() => {
-      document
-        .getElementById("contact")
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-    }, 100);
-  }}
+                      setTimeout(() => {
+                        document.getElementById("contact")?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }, 100);
+                    }}
                   >
                     {loading ? (
                       <>
@@ -1171,7 +1151,7 @@ const handleSubmit = async (e) => {
                       </>
                     ) : (
                       <>
-                        Submit Another  Enquiry
+                        Submit Another Enquiry
                         <i className="bi bi-arrow-right"></i>
                       </>
                     )}
