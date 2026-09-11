@@ -76,6 +76,30 @@ function Service() {
               </p>
 
 
+<div className="service-platform-images">
+
+  <div className="platform-image-card">
+    <img
+      src="/images/mt4.jpeg"
+      alt="MetaTrader 4"
+    />
+
+    <span>MT4</span>
+  </div>
+
+  <div className="platform-image-card">
+    <img
+      src="/images/mt5.jpeg"
+      alt="MetaTrader 5"
+    />
+
+    <span>MT5</span>
+  </div>
+
+</div>
+
+
+
               <div className="service-list">
 
                 <div className="service-list-item">
@@ -85,7 +109,7 @@ function Service() {
                   </span>
                 </div>
 
-                <div className="service-list-item">
+                {/* <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
                     Custom Entry & Exit Logic
@@ -118,7 +142,7 @@ function Service() {
                   <span>
                     Strategy Testing & Optimization
                   </span>
-                </div>
+                </div> */}
 
               </div>
 
@@ -167,6 +191,30 @@ function Service() {
               </p>
 
 
+{/* <div className="service-platform-images"> */}
+
+  <div className="platform-image-card">
+    <img
+      src="/images/indianmarket.jpeg"
+      alt="MetaTrader 4"
+    />
+
+    {/* <span>MT4</span> */}
+  </div>
+
+  {/* <div className="platform-image-card">
+    <img
+      src="/images/mt5.jpeg"
+      alt="MetaTrader 5"
+    />
+
+    <span>MT5</span>
+  </div> */}
+
+{/* </div> */}
+
+
+
               <div className="service-list">
 
                 <div className="service-list-item">
@@ -183,7 +231,7 @@ function Service() {
                   </span>
                 </div>
 
-                <div className="service-list-item">
+                {/* <div className="service-list-item">
                   <i className="bi bi-check2"></i>
                   <span>
                     Broker API Integration
@@ -209,7 +257,7 @@ function Service() {
                   <span>
                     Custom Trading Logic
                   </span>
-                </div>
+                </div> */}
 
               </div>
 
