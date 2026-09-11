@@ -107,7 +107,13 @@ function FAQ() {
                 team is here to help you understand the basics and get started.
               </p>
 
-              <button className="faq-contact-btn">
+              <button className="faq-contact-btn"
+               onClick={() =>
+    window.open(
+      "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
+      "_blank"
+    )
+  }>
                 Talk to Our Team
                 <i className="bi bi-arrow-right"></i>
               </button>

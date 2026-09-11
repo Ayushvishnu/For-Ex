@@ -500,14 +500,20 @@ const handleSubmit = async (e) => {
                 <span>Strategy Support</span>
 
                 <div className="contact-chips">
-                  <div>FOREX</div>
+                  {/* <div>FOREX</div> */}
                   <div>MT4</div>
                   <div>MT5</div>
-                  <div>LOREM</div>
+                  {/* <div>LOREM</div> */}
                 </div>
               </div>
 
-              <button className="whatsapp-btn">
+              <button className="whatsapp-btn"
+               onClick={() =>
+    window.open(
+      "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
+      "_blank"
+    )
+  }>
                 <i className="bi bi-whatsapp"></i>
                 Chat on WhatsApp
               </button>

@@ -53,9 +53,8 @@ Make Your Algo.
             <br />
             <div data-aos="fade-right">
               {" "}
-             Automate  <span>Your </span>
-              <br />
-              <span>Strategy.</span>
+             Turn Your   <span>Strategy Into </span>
+              <span>Automated Trading.</span>
             </div>
           </h1>
 
@@ -65,9 +64,7 @@ Make Your Algo.
             data-aos-delay="200"
             data-aos-once="false"
           >
-            Explore the Forex market with practical insights,market analysis and
-            structured trading strategies designed to help you make more
-            informed trading decisions
+We build automated trading systems from your strategy, combining your trading rules and logic into a custom algorithm developed for systematic execution.
           </p>
 
           <div className="hero-buttons">

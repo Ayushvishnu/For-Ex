@@ -288,16 +288,15 @@ function About() {
 
           <div className="about-buttons">
 
-            <button
-              className="about-btn"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-              }
-            >
+        <button
+  className="about-btn"
+  onClick={() =>
+    window.open(
+      "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
+      "_blank"
+    )
+  }
+>
               <i className="bi bi-chat-fill"></i>
               Talk to Our Team
             </button>
@@ -384,6 +383,49 @@ function About() {
           </div>
 
         </div> */}
+
+
+{/* =========================
+    RIGHT VIDEO
+========================== */}
+
+<div
+  className="about-right-video"
+  data-aos="fade-left"
+  data-aos-duration="1000"
+>
+  <div className="about-video-wrapper">
+
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+    >
+      <source
+        src="/images/earth.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <div className="about-video-overlay"></div>
+
+    {/* <div className="about-video-content">
+      <span>GREEKSLABS</span>
+
+      <h3>
+        Technology Meets
+        <br />
+        <strong>Financial Markets</strong>
+      </h3>
+    </div> */}
+
+  </div>
+</div>
+
+
+
 
       </div>
     </section>
