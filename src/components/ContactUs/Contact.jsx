@@ -13,6 +13,8 @@ function Contact() {
 
   const [error, setError] = useState("");
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
   // const [formData, setFormData] = useState({
   //   fullName: "",
   //   email: "",
@@ -21,117 +23,146 @@ function Contact() {
   //   strategyRequirements: "",
   // });
 
-const [formData, setFormData] = useState({
-  fullName: "",
-  email: "",
-  phone: "",
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
 
-  brokerName: "",
-  otherBrokerName: "",
-  // tradingSegment: "",
+    brokerName: "",
+    otherBrokerName: "",
+    // tradingSegment: "",
 
-  platform: "",
-  strategyRequirements: "",
-});
+    platform: "",
+    strategyRequirements: "",
+  });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    // Prevent double submit
-    if (loading) {
-      return;
-    }
+const fileToBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
 
-    setError("");
+    reader.onload = () => {
+      const result = String(reader.result || "");
 
-    // ----------------------------
-    // Check market
-    // ----------------------------
-
-    if (!market) {
-      setError("Please select a market.");
-
-      return;
-    }
-
-    // ----------------------------
-    // Check Forex platform
-    // ----------------------------
-
-    if (market === "forex" && !formData.platform) {
-      setError("Please select MT4 or MT5.");
-
-      return;
-    }
-
-    const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
-
-    if (!scriptUrl) {
-      setError("Google Script URL is not configured.");
-
-      return;
-    }
-
-    const payload = {
-      fullName: formData.fullName.trim(),
-
-      email: formData.email.trim(),
-
-      phone: formData.phone.trim(),
-
-      market: market === "forex" ? "Forex" : "Indian Market",
-
-      platform: market === "forex" ? formData.platform : "",
-
-      strategyRequirements: formData.strategyRequirements.trim(),
+      resolve(result.split(",")[1] || "");
     };
 
-    try {
-      setLoading(true);
+    reader.onerror = reject;
 
-      const response = await fetch(scriptUrl, {
-        method: "POST",
+    reader.readAsDataURL(file);
+  });
 
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
-        },
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
 
-        body: JSON.stringify(payload),
+//     // Prevent double submit
+//     if (loading) {
+//       return;
+//     }
 
-        redirect: "follow",
-      });
+//     setError("");
 
-      const result = await response.json();
+//     // ----------------------------
+//     // Check market
+//     // ----------------------------
 
-      console.log("Google Sheet response:", result);
+//     if (!market) {
+//       setError("Please select a market.");
 
-      if (!result.success) {
-        throw new Error(result.message || "Submission failed");
-      }
+//       return;
+//     }
 
-      // SUCCESS
+//     // ----------------------------
+//     // Check Forex platform
+//     // ----------------------------
 
-      setSubmitted(true);
+//     if (market === "forex" && !formData.platform) {
+//       setError("Please select MT4 or MT5.");
 
-      // Clear form
+//       return;
+//     }
 
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        platform: "",
-        strategyRequirements: "",
-      });
+//     const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
-      setMarket("");
-    } catch (err) {
-      console.error(err);
+//     if (!scriptUrl) {
+//       setError("Google Script URL is not configured.");
 
-      setError(err.message || "Unable to submit strategy request.");
-    } finally {
-      setLoading(false);
-    }
-  };
+//       return;
+//     }
+
+
+// let fileName = "";
+// let fileData = "";
+// let fileMimeType = "";
+
+// if (selectedFile) {
+//   fileName = selectedFile.name;
+//   fileMimeType = selectedFile.type;
+//   fileData = await fileToBase64(selectedFile);
+// }
+
+
+
+//     const payload = {
+//       fullName: formData.fullName.trim(),
+
+//       email: formData.email.trim(),
+
+//       phone: formData.phone.trim(),
+
+//       market: market === "forex" ? "Forex" : "Indian Market",
+
+//       platform: market === "forex" ? formData.platform : "",
+
+//       strategyRequirements: formData.strategyRequirements.trim(),
+//     };
+
+//     try {
+//       setLoading(true);
+
+//       const response = await fetch(scriptUrl, {
+//         method: "POST",
+
+//         headers: {
+//           "Content-Type": "text/plain;charset=utf-8",
+//         },
+
+//         body: JSON.stringify(payload),
+
+//         redirect: "follow",
+//       });
+
+//       const result = await response.json();
+
+//       console.log("Google Sheet response:", result);
+
+//       if (!result.success) {
+//         throw new Error(result.message || "Submission failed");
+//       }
+
+//       // SUCCESS
+
+//       setSubmitted(true);
+
+//       // Clear form
+
+//       setFormData({
+//         fullName: "",
+//         email: "",
+//         phone: "",
+//         platform: "",
+//         strategyRequirements: "",
+//       });
+
+//       setMarket("");
+//     } catch (err) {
+//       console.error(err);
+
+//       setError(err.message || "Unable to submit strategy request.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
 
   // const handleChange = (e) => {
   //   const { name, value } = e.target;
@@ -143,40 +174,218 @@ const [formData, setFormData] = useState({
   // };
 
 
-const handleMarketChange = (selectedMarket) => {
 
-  setMarket(selectedMarket);
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  setFormData((prev) => ({
-    ...prev,
+  if (loading) {
+    return;
+  }
 
-    brokerName: "",
-    otherBrokerName: "",
-    tradingSegment: "",
-    platform: "",
-  }));
+  setError("");
+
+  if (!market) {
+    setError("Please select a market.");
+    return;
+  }
+
+  if (market === "forex" && !formData.platform) {
+    setError("Please select MT4 or MT5.");
+    return;
+  }
+
+  if (market === "indian" && !formData.brokerName) {
+    setError("Please select a broker.");
+    return;
+  }
+
+  if (
+    market === "indian" &&
+    formData.brokerName === "Other" &&
+    !formData.otherBrokerName.trim()
+  ) {
+    setError("Please enter broker name.");
+    return;
+  }
+
+  const scriptUrl =
+    import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+
+  if (!scriptUrl) {
+    setError("Google Script URL is not configured.");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    let fileName = "";
+    let fileData = "";
+    let fileMimeType = "";
+
+    if (selectedFile) {
+      fileName = selectedFile.name;
+      fileMimeType = selectedFile.type;
+      fileData = await fileToBase64(selectedFile);
+    }
+
+    const finalBrokerName =
+      market === "indian"
+        ? formData.brokerName === "Other"
+          ? formData.otherBrokerName.trim()
+          : formData.brokerName
+        : "";
+
+    const payload = {
+      fullName: formData.fullName.trim(),
+
+      email: formData.email.trim(),
+
+      phone: formData.phone.trim(),
+
+      market:
+        market === "forex"
+          ? "Forex"
+          : "Indian Market",
+
+      brokerName: finalBrokerName,
+
+      platform:
+        market === "forex"
+          ? formData.platform
+          : "",
+
+      strategyRequirements:
+        formData.strategyRequirements.trim(),
+
+      fileName,
+      fileData,
+      fileMimeType,
+    };
+
+    console.log("Submitting payload:", {
+      ...payload,
+      fileData: fileData
+        ? `${fileData.length} characters`
+        : "",
+    });
+
+    const response = await fetch(scriptUrl, {
+      method: "POST",
+
+      headers: {
+        "Content-Type":
+          "text/plain;charset=utf-8",
+      },
+
+      body: JSON.stringify(payload),
+
+      redirect: "follow",
+    });
+
+    const result = await response.json();
+
+    console.log(
+      "Google Sheet response:",
+      result
+    );
+
+    if (!result.success) {
+      throw new Error(
+        result.message ||
+          "Submission failed"
+      );
+    }
+
+    setSubmitted(true);
+
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      brokerName: "",
+      otherBrokerName: "",
+      platform: "",
+      strategyRequirements: "",
+    });
+
+    setSelectedFile(null);
+
+    setMarket("");
+
+  } catch (err) {
+    console.error(err);
+
+    setError(
+      err.message ||
+        "Unable to submit strategy request."
+    );
+
+  } finally {
+    setLoading(false);
+  }
 };
 
 
 
-const handleChange = (e) => {
-  const { name, value } = e.target;
+  const handleMarketChange = (selectedMarket) => {
+    setMarket(selectedMarket);
 
-  setFormData((prev) => ({
-    ...prev,
+    setFormData((prev) => ({
+      ...prev,
 
-    [name]: value,
+      brokerName: "",
+      otherBrokerName: "",
+      tradingSegment: "",
+      platform: "",
+    }));
+  };
 
-    ...(name === "brokerName" && value !== "Other"
-      ? {
-          otherBrokerName: "",
-        }
-      : {}),
-  }));
-};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
+    setFormData((prev) => ({
+      ...prev,
 
+      [name]: value,
 
+      ...(name === "brokerName" && value !== "Other"
+        ? {
+            otherBrokerName: "",
+          }
+        : {}),
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+
+    if (!file) {
+      setSelectedFile(null);
+      return;
+    }
+
+    const allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
+
+    if (!allowedTypes.includes(file.type)) {
+      setError("Only JPG, JPEG, PNG and PDF files are allowed.");
+      setSelectedFile(null);
+      e.target.value = "";
+      return;
+    }
+
+    const maxSize = 4 * 1024 * 1024;
+
+    if (file.size > maxSize) {
+      setError("File must be smaller than 4 MB.");
+      setSelectedFile(null);
+      e.target.value = "";
+      return;
+    }
+
+    setSelectedFile(file);
+    setError("");
+  };
 
   return (
     <section className="contact-section" id="contact">
@@ -493,8 +702,11 @@ const handleChange = (e) => {
                                   ? "market-option active"
                                   : "market-option"
                               }
-// onClick={() => setMarket("forex")}
-                              onClick={() => setMarket("indian")}
+                              // onClick={() => setMarket("forex")}
+
+                              // onClick={() => setMarket("indian")}
+
+                              onClick={() => handleMarketChange("indian")}
                             >
                               <i className="bi bi-bar-chart-fill"></i>
 
@@ -594,65 +806,45 @@ const handleChange = (e) => {
                       )} */}
 
                       {market === "indian" && (
-  <>
-    {/* BROKER */}
+                        <>
+                          {/* BROKER */}
 
-    <div className="col-12 col-md-6">
-      <div className="contact-form-group">
+                          <div className="col-12 col-md-6">
+                            <div className="contact-form-group">
+                              <label>
+                                Broker Name <span>*</span>
+                              </label>
 
-        <label>
-          Broker Name <span>*</span>
-        </label>
+                              <div className="contact-select-wrapper">
+                                <i className="bi bi-building"></i>
 
-        <div className="contact-select-wrapper">
+                                <select
+                                  name="brokerName"
+                                  value={formData.brokerName}
+                                  onChange={handleChange}
+                                  required
+                                >
+                                  <option value="">Select broker</option>
 
-          <i className="bi bi-building"></i>
+                                  <option value="Zerodha">Zerodha</option>
 
-          <select
-            name="brokerName"
-            value={formData.brokerName}
-            onChange={handleChange}
-            required
-          >
-            <option value="">
-              Select broker
-            </option>
+                                  <option value="Angel One">Angel One</option>
 
-            <option value="Zerodha">
-              Zerodha
-            </option>
+                                  <option value="IIFL">IIFL</option>
 
-            <option value="Angel One">
-              Angel One
-            </option>
+                                  <option value="Alice Blue">Alice Blue</option>
 
-            <option value="IIFL">
-              IIFL
-            </option>
+                                  <option value="Upstox">Upstox</option>
 
-            <option value="Alice Blue">
-              Alice Blue
-            </option>
+                                  <option value="Other">Other</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
 
-            <option value="Upstox">
-              Upstox
-            </option>
+                          {/* TRADING SEGMENT */}
 
-            <option value="Other">
-              Other
-            </option>
-
-          </select>
-
-        </div>
-
-      </div>
-    </div>
-
-
-    {/* TRADING SEGMENT */}
-
-    {/* <div className="col-12 col-md-6">
+                          {/* <div className="col-12 col-md-6">
       <div className="contact-form-group">
 
         <label>
@@ -700,42 +892,32 @@ const handleChange = (e) => {
       </div>
     </div> */}
 
+                          {/* OTHER BROKER NAME */}
 
-    {/* OTHER BROKER NAME */}
+                          {formData.brokerName === "Other" && (
+                            <div className="col-12">
+                              <div className="contact-form-group">
+                                <label>
+                                  Enter Broker Name <span>*</span>
+                                </label>
 
-    {formData.brokerName === "Other" && (
+                                <div className="contact-input-wrapper">
+                                  <i className="bi bi-building-add"></i>
 
-      <div className="col-12">
-
-        <div className="contact-form-group">
-
-          <label>
-            Enter Broker Name <span>*</span>
-          </label>
-
-          <div className="contact-input-wrapper">
-
-            <i className="bi bi-building-add"></i>
-
-            <input
-              type="text"
-              name="otherBrokerName"
-              value={formData.otherBrokerName}
-              onChange={handleChange}
-              placeholder="Enter your broker name"
-              required
-            />
-
-          </div>
-
-        </div>
-
-      </div>
-
-    )}
-
-  </>
-)}
+                                  <input
+                                    type="text"
+                                    name="otherBrokerName"
+                                    value={formData.otherBrokerName}
+                                    onChange={handleChange}
+                                    placeholder="Enter your broker name"
+                                    required
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      )}
 
                       {/* ===============================
                           FOREX
@@ -752,13 +934,24 @@ const handleChange = (e) => {
                               <div className="contact-select-wrapper">
                                 <i className="bi bi-window"></i>
 
-                                <select required>
+                                {/* <select required>
                                   <option value="">Select platform</option>
 
                                   <option>MT4</option>
                                   <option>MT5</option>
-                                  {/* <option>Both</option> */}
-                                  {/* <option>Other</option> */}
+                         
+                                </select> */}
+
+                                <select
+                                  name="platform"
+                                  value={formData.platform}
+                                  onChange={handleChange}
+                                  required
+                                >
+                                  <option value="">Select platform</option>
+
+                                  <option value="MT4">MT4</option>
+                                  <option value="MT5">MT5</option>
                                 </select>
                               </div>
                             </div>
@@ -793,7 +986,9 @@ const handleChange = (e) => {
                       STRATEGY DETAILS
                   ================================ */}
 
-                  <div className="contact-form-section">
+                  <div className="contact-form-section"
+                    id="strategy-form-section"
+>
                     <div className="form-section-title">
                       <span>03</span>
                       Strategy Requirement
@@ -847,8 +1042,20 @@ const handleChange = (e) => {
                               <span>PNG, JPG, JPEG or PDF</span>
                             </div>
 
-                            <input type="file" accept=".png,.jpg,.jpeg,.pdf" />
+                            {/* <input type="file" accept=".png,.jpg,.jpeg,.pdf" /> */}
+
+                            <input
+                              type="file"
+                              accept=".png,.jpg,.jpeg,.pdf"
+                              onChange={handleFileChange}
+                            />
                           </label>
+                          {selectedFile && (
+                            <div className="selected-file-name">
+                              <i className="bi bi-file-earmark-check"></i>
+                              <span>{selectedFile.name}</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -879,10 +1086,30 @@ const handleChange = (e) => {
                       SUBMIT
                   ================================ */}
 
-                  <button type="submit" className="contact-submit-btn">
+                  {/* <button type="submit" className="contact-submit-btn">
                     Submit Strategy Enquiry
                     <i className="bi bi-arrow-right"></i>
-                  </button>
+                  </button> */}
+
+<button
+  type="submit"
+  className="contact-submit-btn"
+  disabled={loading}
+>
+  {loading ? (
+    <>
+      <span className="contact-spinner"></span>
+      Submitting...
+    </>
+  ) : (
+    <>
+      Submit Strategy Enquiry
+      <i className="bi bi-arrow-right"></i>
+    </>
+  )}
+</button>
+
+                  
                 </form>
               ) : (
                 /* ===============================
@@ -915,9 +1142,21 @@ const handleChange = (e) => {
                   </button> */}
 
                   <button
-                    type="submit"
+                     type="button"
                     className="contact-submit-btn"
                     disabled={loading}
+                      onClick={() => {
+    setSubmitted(false);
+
+    setTimeout(() => {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+    }, 100);
+  }}
                   >
                     {loading ? (
                       <>
@@ -926,7 +1165,7 @@ const handleChange = (e) => {
                       </>
                     ) : (
                       <>
-                        Submit Strategy Enquiry
+                        Submit Another  Enquiry
                         <i className="bi bi-arrow-right"></i>
                       </>
                     )}
