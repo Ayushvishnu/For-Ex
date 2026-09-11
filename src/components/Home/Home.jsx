@@ -49,13 +49,13 @@ function Home() {
             data-aos-mirror="true"
           >
             {/* Turn Your Trading Ideas */}
-            Trade Forex With
+Make Your Algo.
             <br />
             <div data-aos="fade-right">
               {" "}
-              Knowledge, <span>Strategy &</span>
+             Automate  <span>Your </span>
               <br />
-              <span>Confidence</span>
+              <span>Strategy.</span>
             </div>
           </h1>
 
