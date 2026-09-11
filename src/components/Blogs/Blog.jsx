@@ -144,7 +144,7 @@ function Blog() {
                     <div className="col-4">
                       <div className="small-blog-image">
                         <img
-                          src="/images/4.png"
+                          src="/images/4portriat.jpeg"
                           alt="Forex trading strategy"
                         />
                       </div>
