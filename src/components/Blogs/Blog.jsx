@@ -144,7 +144,7 @@ function Blog() {
                     <div className="col-4">
                       <div className="small-blog-image">
                         <img
-                          src="/images/4portriat.jpeg"
+                          src="/images/4p.jpeg"
                           alt="Forex trading strategy"
                         />
                       </div>
@@ -191,7 +191,7 @@ function Blog() {
                     <div className="col-4">
                       <div className="small-blog-image">
                         <img
-                          src="/images/5.png"
+                          src="/images/5p.jpeg"
                           alt="MT4 and MT5 algorithmic trading"
                         />
                       </div>

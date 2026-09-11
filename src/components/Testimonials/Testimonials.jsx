@@ -70,9 +70,7 @@ function Testimonials() {
               </div>
 
               <p className="featured-quote">
-                “The market analysis was clear and easy to understand. It helped
-                me get a better view of the Forex market and make my trading
-                plan with more confidence.”
+                “Make My EA ' team understood my trading strategy clearly and turned my manual rules into a custom EA exactly as I needed. The development process was smooth from start to finish.”
               </p>
 
               <div className="testimonial-user">
@@ -120,9 +118,7 @@ function Testimonials() {
                   </div>
 
                   <p className="small-quote">
-                    “The Forex insights were simple and practical. I found it
-                    easier to follow market movements and understand the factors
-                    affecting currency pairs.”
+                    “I wanted to automate my manual strategy without spending weeks on development. Make My Ea 's  team understood my requirements, built the EA quickly and helped me get everything configured properly.”
                   </p>
 
                   <div className="testimonial-stars small-stars">
@@ -158,9 +154,7 @@ function Testimonials() {
                   </div>
 
                   <p className="small-quote">
-                    “I liked the focus on market analysis and risk management.
-                    The information was straightforward and helped me understand
-                    the Forex market better.”
+                  “Quick development, clear communication and complete setup. Make My EA team made automating my strategy surprisingly simple.”
                   </p>
 
                   <div className="testimonial-stars small-stars">
