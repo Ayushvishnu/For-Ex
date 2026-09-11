@@ -212,8 +212,8 @@ function Footer() {
 
                 <div>
                   <span>Phone</span>
-                  <a href="tel:+910000000000">
-                    +91 00000 00000
+                  <a href="tel:+91 90379 53858">
+                     +91 90379 53858
                   </a>
                 </div>
 
@@ -226,7 +226,7 @@ function Footer() {
 
                 <div>
                   <span>Support</span>
-                  <p>Mon – Sat</p>
+                  <p>24x7</p>
                 </div>
 
               </div>

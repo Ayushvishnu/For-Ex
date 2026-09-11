@@ -550,7 +550,7 @@
 ========================================= */
 
 .small-blog-footer {
-  margin-top: auto;
+  /* margin-top: auto;
 
   padding-top: 15px;
 
@@ -558,14 +558,36 @@
 
   align-items: center;
 
-  justify-content: space-between;
+  justify-content: space-between; */
+ display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  margin-bottom: 15px;
+
+  color: #77736f;
+
+  font-size: 12px;
+  padding-top: 15px;
+
+
 }
+.small-blog-footer i{
 
+  color: #d4af37;
 
+}
 .small-blog-footer span {
-  color: #696561;
+  /* color: #696561;
 
-  font-size: 11px;
+  font-size: 11px; */
+   display: flex;
+
+  align-items: center;
+
+  gap: 7px;
 }
 
 

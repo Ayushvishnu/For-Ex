@@ -19,11 +19,13 @@ function App() {
       <Home />
       <Service />
 
-      <About />
       <AlgoTrading />
 
       <Testimonials />
+
       <Blog />
+      <About />
+
       <FAQ />
       <Contact />
       <Footer />

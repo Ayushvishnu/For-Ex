@@ -447,7 +447,7 @@ function Contact() {
 
                 <div>
                   <span>Phone</span>
-                  <p>+91 00000 00000</p>
+                  <p>+91 90379 53858</p>
                 </div>
               </div>
 
@@ -460,7 +460,9 @@ function Contact() {
 
                 <div>
                   <span>Working Hours</span>
-                  <p>Mon – Fri • 9:00 AM – 3:15 PM</p>
+                  {/* <p>Mon – Fri • 9:00 AM – 3:15 PM</p> */}
+                  <p>24x7</p>
+
                 </div>
               </div>
 
@@ -473,6 +475,8 @@ function Contact() {
                   {/* <div>FOREX</div> */}
                   <div>MT4</div>
                   <div>MT5</div>
+                  <div>INDIAN MARKET</div>
+
                   {/* <div>LOREM</div> */}
                 </div>
               </div>

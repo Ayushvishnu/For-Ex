@@ -4,11 +4,9 @@ function Service() {
   return (
     <section className="service-section" id="service">
       <div className="container">
-
         {/* HEADER */}
         <div className="row justify-content-center">
           <div className="col-12 col-lg-9 text-center">
-
             <div
               className="service-tag"
               data-aos="fade-up"
@@ -36,77 +34,53 @@ function Service() {
               broker integrations.
             </p>
 
+            
           </div>
         </div>
 
-
         {/* SERVICE CARDS */}
         <div className="row g-4 service-row">
-
           {/* FOREX SERVICE */}
           <div className="col-12 col-lg-6">
-
             <div
               className="service-card"
               data-aos="fade-right"
               data-aos-duration="900"
             >
-
               <div className="service-card-top">
-
                 <div className="service-icon">
                   <i className="bi bi-globe2"></i>
                 </div>
 
-                <span className="service-number">
-                  01
-                </span>
-
+                <span className="service-number">01</span>
               </div>
 
-
-              <h3>
-                Forex Algo Development
-              </h3>
+              <h3>Forex Algo Development</h3>
 
               <p className="service-card-description">
-                We help convert Forex trading ideas into structured
-                algorithmic strategies for automated and rule-based
-                execution across supported trading platforms.
+                We help convert Forex trading ideas into structured algorithmic
+                strategies for automated and rule-based execution across
+                supported trading platforms.
               </p>
 
+              <div className="service-platform-images">
+                <div className="platform-image-card">
+                  <img src="/images/mt4.jpeg" alt="MetaTrader 4" />
 
-<div className="service-platform-images">
+                  <span>MT4</span>
+                </div>
 
-  <div className="platform-image-card">
-    <img
-      src="/images/mt4.jpeg"
-      alt="MetaTrader 4"
-    />
+                <div className="platform-image-card">
+                  <img src="/images/mt5.jpeg" alt="MetaTrader 5" />
 
-    <span>MT4</span>
-  </div>
-
-  <div className="platform-image-card">
-    <img
-      src="/images/mt5.jpeg"
-      alt="MetaTrader 5"
-    />
-
-    <span>MT5</span>
-  </div>
-
-</div>
-
-
+                  <span>MT5</span>
+                </div>
+              </div>
 
               <div className="service-list">
-
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
-                  <span>
-                    MT4 & MT5 Strategy Development
-                  </span>
+                  <span>MT4 & MT5 Strategy Development</span>
                 </div>
 
                 {/* <div className="service-list-item">
@@ -143,66 +117,60 @@ function Service() {
                     Strategy Testing & Optimization
                   </span>
                 </div> */}
-
               </div>
-
 
               <div className="service-bottom-text">
-                Turn your Forex trading rules into automated strategies
-                for MT4 and MT5 with custom entry, exit and risk-management
-                logic.
+                Turn your Forex trading rules into automated strategies for MT4
+                and MT5 with custom entry, exit and risk-management logic.
               </div>
-
+            <button
+  className="service-card-btn"
+  onClick={() =>
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      })
+  }
+>
+  <i className="bi bi-arrow-right-circle-fill"></i>
+  Build Your Strategy
+</button>
             </div>
-
           </div>
-
 
           {/* INDIAN MARKET SERVICE */}
           <div className="col-12 col-lg-6">
-
             <div
               className="service-card"
               data-aos="fade-left"
               data-aos-duration="900"
             >
-
               <div className="service-card-top">
-
                 <div className="service-icon">
                   <i className="bi bi-bar-chart-fill"></i>
                 </div>
 
-                <span className="service-number">
-                  02
-                </span>
-
+                <span className="service-number">02</span>
               </div>
 
-
-              <h3>
-                Indian Market Algo Development
-              </h3>
+              <h3>Indian Market Algo Development</h3>
 
               <p className="service-card-description">
                 Build customized algorithmic trading solutions for Indian
-                markets based on your strategy rules, broker setup and
-                trading requirements.
+                markets based on your strategy rules, broker setup and trading
+                requirements.
               </p>
 
+              {/* <div className="service-platform-images"> */}
 
-{/* <div className="service-platform-images"> */}
+              <div className="platform-image-card">
+                <img src="/images/indianmarket.jpeg" alt="MetaTrader 4" />
 
-  <div className="platform-image-card">
-    <img
-      src="/images/indianmarket.jpeg"
-      alt="MetaTrader 4"
-    />
+                {/* <span>MT4</span> */}
+              </div>
 
-    {/* <span>MT4</span> */}
-  </div>
-
-  {/* <div className="platform-image-card">
+              {/* <div className="platform-image-card">
     <img
       src="/images/mt5.jpeg"
       alt="MetaTrader 5"
@@ -211,24 +179,17 @@ function Service() {
     <span>MT5</span>
   </div> */}
 
-{/* </div> */}
-
-
+              {/* </div> */}
 
               <div className="service-list">
-
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
-                  <span>
-                    Equity Strategy Automation
-                  </span>
+                  <span>Equity Strategy Automation</span>
                 </div>
 
                 <div className="service-list-item">
                   <i className="bi bi-check2"></i>
-                  <span>
-                    Futures & Options Strategies
-                  </span>
+                  <span>Futures & Options Strategies</span>
                 </div>
 
                 {/* <div className="service-list-item">
@@ -258,21 +219,30 @@ function Service() {
                     Custom Trading Logic
                   </span>
                 </div> */}
-
               </div>
 
+            <div className="service-bottom-text">
+  Automate strategies for Indian equities, futures and options
+  with broker integrations and customized execution rules.
+</div>
 
-              <div className="service-bottom-text">
-                Automate strategies for Indian equities, futures and
-                options with broker integrations and customized execution
-                rules.
-              </div>
-
+<button
+  className="service-card-btn"
+  onClick={() =>
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      })
+  }
+>
+  <i className="bi bi-arrow-right-circle-fill"></i>
+  Build Your Strategy
+</button>
             </div>
-
           </div>
-
         </div>
+        
 
       </div>
     </section>

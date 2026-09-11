@@ -49,11 +49,11 @@ function Home() {
             data-aos-mirror="true"
           >
             {/* Turn Your Trading Ideas */}
-Make Your Algo.
+            Make Your E A,
             <br />
             <div data-aos="fade-right">
               {" "}
-             Turn Your   <span>Strategy Into </span>
+              Build Your <span>Strategy Into </span>
               <span>Automated Trading.</span>
             </div>
           </h1>
@@ -64,7 +64,9 @@ Make Your Algo.
             data-aos-delay="200"
             data-aos-once="false"
           >
-We build automated trading systems from your strategy, combining your trading rules and logic into a custom algorithm developed for systematic execution.
+            We build automated trading systems from your strategy, combining
+            your trading rules and logic into a custom algorithm developed for
+            systematic execution.
           </p>
 
           <div className="hero-buttons">
@@ -129,6 +131,7 @@ We build automated trading systems from your strategy, combining your trading ru
               <i className="bi bi-gear-fill"></i>
               Strategy Evaluation{" "}
             </div>
+            {/* <div className="line"></div> */}
           </div>
 
           <div className="flow-row middle-row">
@@ -148,6 +151,8 @@ We build automated trading systems from your strategy, combining your trading ru
           </div>
 
           <div className="flow-row bottom-row">
+                        {/* <div className="line"></div> */}
+
             <div className="flow-box execute-box">
               <i className="bi bi-play-fill"></i>
               Automated Trading{" "}

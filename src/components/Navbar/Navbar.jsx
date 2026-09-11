@@ -84,11 +84,12 @@ function Navbar() {
     { id: "home", label: "Home" },
             { id: "service", label: "Services" },
 
-    { id: "about", label: "About" },
     // { id: "testimonials", label: "Testimonials" },
 
 
     { id: "blog", label: "Blog" },
+        { id: "about", label: "About" },
+
     { id: "faq", label: "FAQ" },
     { id: "contact", label: "Contact" },
   ];

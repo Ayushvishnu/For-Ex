@@ -91,9 +91,9 @@ function Blog() {
                     03 Sep 2026
                   </span>
 
-                  <span>
+                  {/* <span>
                     <i className="bi bi-clock"></i>6 min read
-                  </span>
+                  </span> */}
                 </div>
 
                 <h3>MT4 vs MT5: Which Trading Platform Should You Choose?</h3>
@@ -105,7 +105,7 @@ function Blog() {
                   trading.
                 </p>
 
-                <div className="blog-author-row">
+                {/* <div className="blog-author-row">
                   <div className="blog-author">
                     <div className="blog-author-avatar">Author</div>
 
@@ -119,7 +119,7 @@ function Blog() {
                     Read Article
                     <i className="bi bi-arrow-right"></i>
                   </button>
-                </div>
+                </div> */}
               </div>
             </article>
           </div>
@@ -143,7 +143,6 @@ function Blog() {
                           src="/images/blog2.jpg"
                           alt="Forex trading strategy"
                         /> */}
-                        
                       </div>
                     </div>
 
@@ -160,11 +159,15 @@ function Blog() {
                         </p>
 
                         <div className="small-blog-footer">
-                          <span>5 min read</span>
-
+                          <span>
+                            {" "}
+                            <i className="bi bi-calendar3"></i>
+                            03 Sep 2026
+                          </span>
+{/* 
                           <button>
                             <i className="bi bi-arrow-up-right"></i>
-                          </button>
+                          </button> */}
                         </div>
                       </div>
                     </div>
@@ -204,12 +207,16 @@ function Blog() {
                           to a trader depend on their broker.
                         </p>
 
-                        <div className="small-blog-footer">
-                          <span>7 min read</span>
-
+                               <div className="small-blog-footer">
+                          <span>
+                            {" "}
+                            <i className="bi bi-calendar3"></i>
+                            04 Sep 2026
+                          </span>
+{/* 
                           <button>
                             <i className="bi bi-arrow-up-right"></i>
-                          </button>
+                          </button> */}
                         </div>
                       </div>
                     </div>
