@@ -146,7 +146,7 @@ function Navbar() {
 >
   <img
     // src="/images/logo.png"
-        src="/images/EA_Logo.jpeg"
+        src="/images/EA_Logo.png"
 
     alt="For-eX"
     className="navbar-logo-img"

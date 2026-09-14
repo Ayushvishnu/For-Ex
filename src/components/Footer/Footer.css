@@ -1,16 +1,24 @@
 /* =========================================
    FOOTER
    ========================================= */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
 
+.footer-logo-img {
+  width: 100px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 
-.privacy{
-    text-decoration: none;
-     font-size: 13px;
-  /* font-weight: 700; */
-
-  transition: 0.3s ease;
-  color: #3e3d3c;
-
+@media (max-width: 600px) {
+  .footer-logo-img {
+    width: 100px;
+  }
 }
 
 

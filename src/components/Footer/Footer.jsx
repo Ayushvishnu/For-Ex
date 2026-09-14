@@ -14,11 +14,11 @@ function Footer() {
           <div className="col-12 col-md-6 col-lg-4">
             <div className="footer-brand">
               <a href="#home" className="footer-logo">
-                <div className="footer-logo-icon">
-                  <i className="bi bi-graph-up-arrow"></i>
-                </div>
-
-                <span>FOR-EX</span>
+                  <img
+        src="/images/EA_Logo.png"
+        alt="For-X Logo"
+        className="footer-logo-img"
+      />
               </a>
 
               <p>
