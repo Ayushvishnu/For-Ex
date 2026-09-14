@@ -42,6 +42,7 @@ function Service() {
         <div className="row g-4 service-row">
           {/* FOREX SERVICE */}
           <div className="col-12 col-lg-6">
+          {/* <div className="col-12 col-md-8"> */}
             <div
               className="service-card"
               data-aos="fade-right"
@@ -140,6 +141,7 @@ function Service() {
 
           {/* INDIAN MARKET SERVICE */}
           <div className="col-12 col-lg-6">
+          {/* <div className="col-12 col-md-8"> */}
             <div
               className="service-card"
               data-aos="fade-left"

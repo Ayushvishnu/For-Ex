@@ -35,8 +35,11 @@
 }
 
 .platform-image-card img {
-  width: 66%;
-  height: 170px;
+  /* width: 66%; */
+    width: 120px;
+
+  height: 120px;
+  /* height: 170px; */
 
   display: block;
 
@@ -56,8 +59,10 @@
 /* MOBILE VIEW */
 @media (max-width: 600px) {
   .platform-image-card img {
-    width: 90%;
-    height: 140px;
+    /* width: 90%;
+    height: 140px; */
+     width: 100px;
+    height: 100px;
     object-fit: cover;
     margin: auto;
   }

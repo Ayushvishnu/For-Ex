@@ -164,7 +164,7 @@ function About() {
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            ABOUT GREEKSLABS
+            ABOUT MAKE MY EA
           </div>
 
           <h2
