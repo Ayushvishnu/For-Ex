@@ -304,9 +304,9 @@ function Blog() {
     {
       id: 1,
       category: "FOREX · TRADING PLATFORM",
-      title: "The Most Expensive Button in Trading: Why Your Emotions Are Costing You MoneyEvery trader knows the feeling.",
+      title: "The Most Expensive Button in Trading: Why Your Emotions Are Costing You Money Every trader knows the feeling.",
       date: "03 Sep 2026",
-      image: "/images/4vs5.jpeg",
+      image: "/images/b1.jpeg",
       shortDescription:
         "You spend hours analyzing the charts. Your setup is clear. The entry condition triggers. But right when you need to execute, your hand freezes Or worse—you move your Stop-Loss mid-trade because of hope.",
       // content: [
@@ -438,7 +438,7 @@ content: [
       category: "METATRADER 4",
       title: "Math Doesn't Panic: The Core Advantage of Algorithmic Execution",
       date: "03 Sep 2026",
-      image: "/images/4p.jpeg",
+      image: "/images/b2.jpeg",
       shortDescription:
         "Open any retail trading terminal, and you will see chaos disguised as opportunity. Green candles spike, red candles crash, economic data drops, and social media buzz sends assets swinging in seconds.",
       // content: [
@@ -548,7 +548,7 @@ content: [
       category: "METATRADER 5",
       title: "Stop Renting Indicators: Why Custom-Built Systems Beat Out-of-the-Box Tools",
       date: "04 Sep 2026",
-      image: "/images/5p.jpeg",
+      image: "/images/b3.jpeg",
       shortDescription:
         "Every retail trader has been there: you buy a shiny new indicator package online, plug it into your charts, and watch it fail within a week.",
       // content: [
