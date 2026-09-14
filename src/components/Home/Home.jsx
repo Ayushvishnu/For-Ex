@@ -49,7 +49,7 @@ function Home() {
             data-aos-mirror="true"
           >
             {/* Turn Your Trading Ideas */}
-            Make Your E A,
+            Make Your EA,
             <br />
             <div data-aos="fade-right">
               {" "}

@@ -17,7 +17,7 @@
   display: block;
 
   width: auto;
-  height: 48px;
+  height: 100px;
 
   object-fit: contain;
 }
@@ -33,13 +33,13 @@
 @media (max-width: 991px) and (orientation: landscape) {
   .navbar-logo-img {
     height: 52px;
-    margin-left: 23px;
+    margin-left:23px !important;
   }
 }
 
 @media (max-width: 991px) and (orientation: portrait) {
   .navbar-logo-img {
-    height: 52px;
+    height: 72px;
     margin-left: 173px;
   }
 }
@@ -50,7 +50,7 @@
 
 @media (max-width: 575px) {
   .navbar-logo-img {
-    height: 36px;
+    height: 56px;
     margin-left: 153px;
   }
 }

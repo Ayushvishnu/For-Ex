@@ -387,8 +387,9 @@ function Contact() {
               data-aos="fade-up"
               data-aos-duration="900"
             >
-              Whether you trade Indian markets or Forex, share your idea with
-              our team and help us understand your strategy requirements.
+  Whether you trade Forex or Indian markets, share your strategy with our team
+  and let us understand your trading rules, automation requirements, and
+  development needs.
             </p>
           </div>
         </div>

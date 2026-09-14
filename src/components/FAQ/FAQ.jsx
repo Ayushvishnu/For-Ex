@@ -11,7 +11,8 @@ function FAQ() {
         "Yes. We analyse your trading strategy, understand its rules and conditions, and build them into a custom algorithm designed for automated execution.",
     },
     {
-      question: "How do you convert a trading strategy into an automated system?",
+      question:
+        "How do you convert a trading strategy into an automated system?",
       answer:
         "We first understand your strategy and map its trading logic, then code, test and configure the system according to your requirements.",
     },
@@ -67,7 +68,7 @@ function FAQ() {
               data-aos="fade-up"
               data-aos-duration="800"
             >
-              Questions About <span>Forex Trading?</span>
+              Questions About <span>Algo Development?</span>
             </h2>
 
             <p
@@ -75,8 +76,8 @@ function FAQ() {
               data-aos="fade-up"
               data-aos-duration="900"
             >
-              Find simple answers to common questions about Forex trading,
-              currency pairs, market analysis and risk management.
+              Find answers about custom algo development, MT4 & MT5 Expert
+              Advisors, strategy automation and setup.
             </p>
           </div>
         </div>
@@ -103,17 +104,20 @@ function FAQ() {
               </h3>
 
               <p>
-                have a Question about Forex trading or the currency market? Our
-                team is here to help you understand the basics and get started.
+                Have questions about algo development or trading automation? Our
+                team is here to help you understand the development process,
+                strategy automation, and MT4 & MT5 Expert Advisor solutions.
               </p>
 
-              <button className="faq-contact-btn"
-               onClick={() =>
-    window.open(
-      "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
-      "_blank"
-    )
-  }>
+              <button
+                className="faq-contact-btn"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
+                    "_blank",
+                  )
+                }
+              >
                 Talk to Our Team
                 <i className="bi bi-arrow-right"></i>
               </button>
@@ -124,8 +128,8 @@ function FAQ() {
                 <i className="bi bi-headset"></i>
 
                 <div>
-                  <span>Forex Support</span>
-                  <p>Forex • Currency Pairs • Market Analysis</p>
+                  <span>Algo Support</span>
+                  <p>EA Development • MT4 & MT5 • Trading Automation</p>
                 </div>
               </div>
             </div>

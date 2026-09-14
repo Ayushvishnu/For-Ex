@@ -145,7 +145,9 @@ function Navbar() {
   tabIndex={0}
 >
   <img
-    src="/images/logo.png"
+    // src="/images/logo.png"
+        src="/images/EA_Logo.jpeg"
+
     alt="For-eX"
     className="navbar-logo-img"
   />
