@@ -304,58 +304,361 @@ function Blog() {
     {
       id: 1,
       category: "FOREX · TRADING PLATFORM",
-      title: "MT4 vs MT5: Which Trading Platform Should You Choose?",
+      title: "The Most Expensive Button in Trading: Why Your Emotions Are Costing You MoneyEvery trader knows the feeling.",
       date: "03 Sep 2026",
       image: "/images/4vs5.jpeg",
       shortDescription:
-        "Explore the key differences between MetaTrader 4 and MetaTrader 5, including trading tools, strategy automation, backtesting, and how each platform supports algorithmic trading.",
-      content: [
-        "MetaTrader 4 and MetaTrader 5 are two widely used trading platforms developed by MetaQuotes. Both platforms support manual and algorithmic trading, but they differ in their features, architecture and capabilities.",
+        "You spend hours analyzing the charts. Your setup is clear. The entry condition triggers. But right when you need to execute, your hand freezes Or worse—you move your Stop-Loss mid-trade because of hope.",
+      // content: [
+      //   "Manual trading doesn't fail because strategies don't work. It fails because human discipline collapses under real market stress.",
 
-        "MT4 is widely known for Forex trading and has a large ecosystem of Expert Advisors, indicators and custom trading tools. Traders can automate predefined strategies using Expert Advisors developed in MQL4.",
+      //   "The Three Silent Profit Killers When real money is on the line, your brain switches from logic to survival mode:",
 
-        "MT5 is the newer platform and provides additional features such as more order types, a more advanced strategy tester, additional timeframes and broader multi-asset support. Automated strategies on MT5 are developed using MQL5.",
+      //   "Fear: You exit a winning trade early for a tiny profit, leaving massive gains on the table.",
 
-        "The right platform depends on your broker, trading requirements and the type of automated strategy you want to build. If your strategy is already designed for MT4, continuing with MT4 may be practical. For newer projects requiring more advanced testing and execution capabilities, MT5 may offer additional flexibility.",
-      ],
+      //   "Greed: You ignore your plan, over-leverage, and chase extended candle spikes.",
+      //   "Revenge: A bad loss tempts you to double down immediately, leading to a blown account.",
+      //   "The Hard Truth: You cannot out-discipline human physiology. When the Indian market gaps up or Forex sessions swing wildly, logic surrenders to emotion.",
+      //   "Why Code Never Flinches Algorithms don't have a heart rate. They don't panic on a red candle, and they don't get greedy on a green one.",
+      //   "When you translate your proprietary strategy into a custom trading algo:",
+      //   "Cold-Blooded Execution: Trades are placed in milliseconds—zero hesitation, zero second-guessing.",
+      //   "Ironclad Risk Management: Stop-losses, profit targets, and position sizing are enforced with 100% mathematical precision.",
+      //   "Consistent Edge: Your system trades your strategy exact to the rule, 24/5 or across every Indian market session.",
+      //   "Stop Letting Emotions Trade Your Capital Trading without human error isn't a luxury anymore; it’s the standard for modern retail traders.",
+      //   "Ready to automate your trading edge?",
+      //   "Let us build a custom, emotion-free algorithm tailored to your precise strategy.",
+      //   "👉 [Get Your Custom Algo Built Today]",
+      // ],
+content: [
+  {
+    type: "paragraph",
+    text:
+      "Manual trading doesn't fail because strategies don't work. It fails because human discipline collapses under real market stress.",
+  },
+
+  {
+    type: "heading",
+    text: "The Three Silent Profit Killers",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "When real money is on the line, your brain switches from logic to survival mode.",
+  },
+
+  {
+    type: "point",
+    title: "Fear",
+    text:
+      "You exit a winning trade early for a tiny profit, leaving larger potential gains on the table.",
+  },
+
+  {
+    type: "point",
+    title: "Greed",
+    text:
+      "You ignore your trading plan, over-leverage, or chase extended market movements.",
+  },
+
+  {
+    type: "point",
+    title: "Revenge Trading",
+    text:
+      "A bad loss can tempt you to increase risk immediately and make decisions outside your original strategy.",
+  },
+
+  {
+    type: "highlight",
+    title: "The Hard Truth",
+    text:
+      "Market pressure can make disciplined execution difficult. During volatile Forex sessions or fast-moving Indian market conditions, emotions can influence decisions.",
+  },
+
+  {
+    type: "heading",
+    text: "Why Code Never Flinches",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "Algorithms don't experience fear or greed. They simply follow the trading rules programmed into the system.",
+  },
+
+  {
+    type: "point",
+    title: "When you translate your proprietary strategy into a custom trading algo:",
+    text:
+      "Cold-Blooded Execution: Trades are placed in milliseconds—zero hesitation, zero second-guessing.",
+  },
+
+  {
+    type: "point",
+    title: "Ironclad Risk Management:",
+    text:
+      " Stop-losses, profit targets, and position sizing are enforced with 100% mathematical precision.",
+  },
+
+  {
+    type: "point",
+    title: "Consistent Edge",
+    text:
+      "Your system trades your strategy exact to the rule, 24/5 or across every Indian market session.",
+  },
+
+  {
+    type: "heading",
+    text: "Turn Your Trading Rules Into a System",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "Stop Letting Emotions Trade Your Capital Trading without human error isn't a luxury anymore; it’s the standard for modern retail traders.",
+  },
+
+
+    {
+    type: "heading",
+    text: "Ready to automate your trading edge?",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "Let us build a custom, emotion-free algorithm tailored to your precise strategy.",
+  },
+],
+
     },
 
     {
       id: 2,
       category: "METATRADER 4",
-      title: "What is MetaTrader 4 (MT4)?",
+      title: "Math Doesn't Panic: The Core Advantage of Algorithmic Execution",
       date: "03 Sep 2026",
       image: "/images/4p.jpeg",
       shortDescription:
-        "MT4 supports automated trading through Expert Advisors (EAs), which can execute predefined trading rules automatically.",
-      content: [
-        "MetaTrader 4, commonly known as MT4, is a trading platform developed by MetaQuotes. It is widely used in the Forex market for chart analysis, manual trading and automated strategy execution.",
+        "Open any retail trading terminal, and you will see chaos disguised as opportunity. Green candles spike, red candles crash, economic data drops, and social media buzz sends assets swinging in seconds.",
+      // content: [
+      //   "For a manual trader, this environment is a psychological minefield. For an algorithm, it is just raw data.",
 
-        "One of the key features of MT4 is its support for Expert Advisors. An Expert Advisor is a program that can monitor market conditions and execute trades automatically according to predefined trading rules.",
+      //   "The Flaw of Human Intuition : We like to think our ,gut feeling is a finely tuned trading asset. In reality, human intuition is heavily flawed by cognitive biases:",
 
-        "A custom EA can include entry conditions, exit conditions, stop-loss rules, take-profit levels, position sizing and additional risk-management logic.",
+      //   "Recency Bias: Letting the last trade dictate your next decision.",
 
-        "MT4 also provides technical indicators, multiple chart timeframes and historical data that can be used when developing and testing trading strategies.",
-      ],
+      //   "Confirmation Bias: Seeing patterns on a chart that simply aren't there.",
+      //   "Fatigue: Missing high-probability setups because you checked the charts two hours too late.",
+      //   "Markets reward math, not emotion. If your trading plan relies on how you feel about a chart at 2:00 PM, you are playing a losing game against institutional systems designed to exploit human error.",
+      //   "How Algorithms Turn Chaos Into Consistency: Algorithmic execution strips away the noise and replaces guesswork with a strict, repeatable framework:",
+      //   "Pure Logic-Driven Rules: An algo doesn't care if a candle looks scary. If the technical indicators align, the order fires instantly.",
+      //   "Unmatched Execution Speed: In fast-moving Forex sessions or volatile Indian market breakouts, milliseconds dictate your fill price. Code eliminates human reaction lag, drastically reducing slippage.",
+      //   "Flawless Backtesting: Before risking a single rupee or dollar, a systemic strategy lets you test years of historical data to prove whether your edge actually works",
+      //   "Build Your System, Protect Your Edge You don't need to stare at glowing screens all day to be a successful trader. You just need a proven methodology backed by cold, hard code.",
+      //   "Whether you trade the NSE, MCX, or global Forex pairs, converting your strategy into a custom automation tool is the ultimate upgrade for your trading business.",
+      //   "👉 [Turn Your Strategy Into a Custom Algo Today]"
+      //   // button navigate to strategy details
+      // ],
+
+
+content: [
+  {
+    type: "paragraph",
+    text:
+      "For a manual trader, rapidly changing markets can create psychological pressure. For an algorithm, market movements are simply data evaluated against predefined conditions.",
+  },
+
+  {
+    type: "heading",
+    text: "The Flaw of Human Intuition",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "We like to think our gut feeling is a finely tuned trading asset. In reality, human intuition is heavily flawed by cognitive biases:",
+  },
+
+  {
+    type: "point",
+    title: "Recency Bias",
+    text:
+      "Allowing the result of your most recent trade to influence your next decision.",
+  },
+
+  {
+    type: "point",
+    title: "Confirmation Bias",
+    text:
+      "Looking only for information that supports the trade you already want to take.",
+  },
+
+  {
+    type: "point",
+    title: "Fatigue",
+    text:
+      "Missing setups or making inconsistent decisions after continuously monitoring markets.",
+  },
+
+  {
+    type: "heading",
+    text: "Markets reward math, not emotion. If your trading plan relies on how you feel about a chart at 2:00 PM, you are playing a losing game against institutional systems designed to exploit human error.",
+  },
+
+  {
+    type: "point",
+    title: "Pure Logic-Driven Rules",
+    text:
+      " An algo doesn't care if a candle looks scary. If the technical indicators align, the order fires instantly.",
+  },
+
+  {
+    type: "point",
+    title: "Unmatched Execution Speed",
+    text:
+      "In fast-moving Forex sessions or volatile Indian market breakouts, milliseconds dictate your fill price. Code eliminates human reaction lag, drastically reducing slippage.",
+  },
+
+  {
+    type: "point",
+    title: "Flawless Backtesting",
+    text:
+      " Before risking a single rupee or dollar, a systemic strategy lets you test years of historical data to prove whether your edge actually works.",
+  },
+
+  {
+    type: "heading",
+    text: "Build Your System, Protect Your Edge",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "You don't need to stare at glowing screens all day to be a successful trader. You just need a proven methodology backed by cold, hard code.  Whether you trade the NSE, MCX, or global Forex pairs, converting your strategy into a custom automation tool is the ultimate upgrade for your trading business.",
+
+  },
+],
+
+
     },
 
     {
       id: 3,
       category: "METATRADER 5",
-      title: "What is MetaTrader 5 (MT5)?",
+      title: "Stop Renting Indicators: Why Custom-Built Systems Beat Out-of-the-Box Tools",
       date: "04 Sep 2026",
       image: "/images/5p.jpeg",
       shortDescription:
-        "MetaTrader 5 is a newer multi-asset trading platform designed for manual and algorithmic trading.",
+        "Every retail trader has been there: you buy a shiny new indicator package online, plug it into your charts, and watch it fail within a week.",
+      // content: [
+      //   "Why? Because off-the-shelf, mass-market tools are built for the masses—which means they are built to fail against institutional liquidity. Every other retail trader is looking at the exact same lagging moving averages and oversold RSI zones.",
+
+      //   "If everyone uses the same blueprint, nobody has an edge.",
+
+      //   "The Trap of Generic Indicators Mass-market retail indicators come with major structural flaws:",
+
+      //   "Lagging Data: Most generic tools react after a market move has already happened, leaving you chasing entries.",
+
+      //   "One-Size-Fits-All Settings: A default setting built for a US tech stock will bleed your capital dry in an Indian index breakout or a high-leverage Forex pair.",
+
+      //   "Zero Proprietary Logic: Anyone can buy them. If your strategy is identical to thousands of others, your broker and market makers will hunt your stops with ease.",
+
+      //   "The Power of Custom System Engineering A true trading edge cannot be bought off a shelf; it must be engineered. When you build a custom algorithm around your own unique logic, everything changes:",
+      //   "Tailored Architecture: Your risk parameters, entry triggers, and multi-timeframe filters are coded specifically to match your trading personality and capital size.",
+      //   "Proprietary Protection: Your logic remains strictly yours. No one else is front-running your setup because your code is unique.",
+      //   "Seamless Integration: Whether you trade high-frequency momentum on Indian indices or overnight trends in Forex, your custom system is optimized for your exact asset class and execution speed.",
+      //   "Stop Renting, Start Building It’s time to stop relying on generic tools designed to profit off your subscriptions. Take the strategy that actually works for you and turn it into a custom-engineered asset.",
+      //   "👉 [Turn Your Unique Strategy Into a Custom Algo Today]"
+      //   //         // button navigate to strategy details
+
+      // ],
+
       content: [
-        "MetaTrader 5, commonly called MT5, is a newer trading platform developed by MetaQuotes. It supports both manual trading and algorithmic trading through automated programs.",
+  {
+    type: "paragraph",
+    text:
+      "Why? Because off-the-shelf, mass-market tools are built for the masses—which means they are built to fail against institutional liquidity. Every other retail trader is looking at the exact same lagging moving averages and oversold RSI zones",
+  },
 
-        "MT5 provides more advanced features than MT4 in several areas, including additional timeframes, more order types, an economic calendar and an improved strategy-testing environment.",
+  {
+    type: "heading",
+    text: "If everyone uses the same blueprint, nobody has an edge.",
+  },
 
-        "Automated strategies in MT5 are developed using MQL5. These programs can monitor market conditions, execute trades and manage positions based on predefined strategy rules.",
+  {
+    type: "point",
+    title: "The Trap of Generic Indicators Mass-market retail indicators come with major structural flaws:",
+    text:
+      "Lagging Data: Most generic tools react after a market move has already happened, leaving you chasing entries.",
+  },
 
-        "MT5 can support multiple asset classes depending on the broker, including Forex, stocks, futures and other financial instruments.",
-      ],
+  {
+    type: "point",
+    title: "One-Size-Fits-All Settings",
+    text:
+      "A default setting built for a US tech stock will bleed your capital dry in an Indian index breakout or a high-leverage Forex pair.",
+  },
+
+  {
+    type: "point",
+    title: "Zero Proprietary Logic:",
+    text:
+      "Anyone can buy them. If your strategy is identical to thousands of others, your broker and market makers will hunt your stops with ease.",
+  },
+
+  {
+    type: "heading",
+    text: "The Power of Custom System Engineering",
+  },
+
+  {
+    type: "point",
+    title: "A true trading edge cannot be bought off a shelf;",
+    text:
+      "it must be engineered. When you build a custom algorithm around your own unique logic, everything changes:",
+  },
+
+  {
+    type: "point",
+    title: "Tailored Architecture",
+    text:
+      " Your risk parameters, entry triggers, and multi-timeframe filters are coded specifically to match your trading personality and capital size.",
+  },
+
+  {
+    type: "point",
+    title: "Proprietary Protection",
+    text:
+      "Your logic remains strictly yours. No one else is front-running your setup because your code is unique.",
+  },
+
+  {
+    type: "heading",
+    text: "Seamless Integration:",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      " Whether you trade high-frequency momentum on Indian indices or overnight trends in Forex, your custom system is optimized for your exact asset class and execution speed.",
+  },
+
+
+
+  {
+    type: "heading",
+    text: "Stop Renting, Start Building",
+  },
+
+  {
+    type: "paragraph",
+    text:
+      "It’s time to stop relying on generic tools designed to profit off your subscriptions. Take the strategy that actually works for you and turn it into a custom-engineered asset.",
+  },
+
+
+],
     },
   ];
 
@@ -609,15 +912,77 @@ function Blog() {
                 {selectedBlog.title}
               </h2>
 
-              <div className="blog-modal-description">
+              {/* <div className="blog-modal-description">
                 {selectedBlog.content.map((paragraph, index) => (
                   <p key={index}>
                     {paragraph}
                   </p>
                 ))}
-              </div>
+              </div> */}
+<div className="blog-modal-description">
 
-              <div className="blog-modal-note">
+  {selectedBlog.content.map((item, index) => {
+
+    if (item.type === "heading") {
+      return (
+        <h3
+          className="blog-modal-section-title"
+          key={index}
+        >
+          {item.text}
+        </h3>
+      );
+    }
+
+    if (item.type === "point") {
+      return (
+        <div
+          className="blog-modal-point"
+          key={index}
+        >
+          <div className="blog-modal-point-icon">
+            <i className="bi bi-check2"></i>
+          </div>
+
+          <div>
+            <h5>{item.title}</h5>
+
+            <p>{item.text}</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (item.type === "highlight") {
+      return (
+        <div
+          className="blog-modal-highlight"
+          key={index}
+        >
+          <i className="bi bi-lightning-charge-fill"></i>
+
+          <div>
+            <h5>{item.title}</h5>
+            <p>{item.text}</p>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <p
+        className="blog-modal-paragraph"
+        key={index}
+      >
+        {item.text}
+      </p>
+    );
+  })}
+
+</div>
+
+
+              {/* <div className="blog-modal-note">
                 <i className="bi bi-info-circle"></i>
 
                 <p>
@@ -625,7 +990,43 @@ function Blog() {
                   Platform features and available markets may vary depending
                   on the broker and trading environment.
                 </p>
-              </div>
+              </div> */}
+
+<div className="blog-modal-cta">
+  <div>
+    <span>HAVE A TRADING STRATEGY?</span>
+
+    <h4>
+      Turn Your Strategy Into an Automated System
+    </h4>
+
+    <p>
+      Share your trading rules with our team and discuss how they
+      can be developed into a custom algorithm.
+    </p>
+  </div>
+
+  <button
+    className="blog-strategy-btn"
+    onClick={() => {
+      closeModal();
+
+      setTimeout(() => {
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+      }, 200);
+    }}
+  >
+    Build Your Strategy
+
+    <i className="bi bi-arrow-right"></i>
+  </button>
+</div>
+
 
             </div>
           </div>
@@ -636,3 +1037,5 @@ function Blog() {
 }
 
 export default Blog;
+
+
