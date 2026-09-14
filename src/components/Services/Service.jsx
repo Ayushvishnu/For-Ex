@@ -166,14 +166,14 @@ function Service() {
               <div className="service-platform-images">
 
               <div className="platform-image-card">
-                <img src="/images/nse.png" alt="MetaTrader 4" />
+                <img src="/images/i1.png" alt="MetaTrader 4" />
 
                 {/* <span>MT4</span> */}
               </div>
 
               <div className="platform-image-card">
     <img
-      src="/images/bse.png"
+      src="/images/i2.png"
       alt="MetaTrader 5"
     />
 

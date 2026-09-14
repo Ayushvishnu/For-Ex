@@ -1,170 +1,16 @@
-// import "./About.css";
-
-// function About() {
-//   return (
-//     <section className="about-section" id="about">
-//       <div className="about-container">
-//         {/* LEFT CONTENT */}
-//         <div className="about-left">
-//           <div className="about-tag">ABOUT GREEKSLABS</div>
-//           <h2 className="about-title">
-//             Empowering Investors With <br />
-//             Knowledge, <span> Technology & Trust</span>
-//           </h2>
-
-//           <p className="about-description">
-//             Get practical insights into Forex trading, currency pairs and market
-//             movements. Learn how market analysis, trading strategies and risk
-//             management can help you approach Forex with a clear plan.
-//           </p>
-
-//           {/* PRINCIPLES */}
-
-//           <div className="about-points">
-//             <div className="about-point">
-//               <div className="point-icon">
-//                 <i className="bi bi-check-lg"></i>
-//               </div>
-
-//               <div className="point-content">
-//                 <h4>Training Excellence</h4>
-
-//                 <span className="point-line"></span>
-
-//                 {/* <p>We begin with the trader&apos;s logic.</p> */}
-//                 <p>
-//                   We offer online and offline stock market training, from
-//                   beginner investing to advanced algo trading, technical
-//                   analysis, and automated trading.
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div className="about-point">
-//               <div className="point-icon">
-//                 <i className="bi bi-check-lg"></i>
-//               </div>
-
-//               <div className="point-content">
-//                 <h4>Advanced Algo Trading Solutions</h4>
-
-//                 <span className="point-line"></span>
-
-//                 <p>
-//                   We develop custom algo trading software, trading bots, API
-//                   integrations, and automation tools for faster and smarter
-//                   trade execution.
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div className="about-point">
-//               <div className="point-icon">
-//                 <i className="bi bi-check-lg"></i>
-//               </div>
-
-//               <div className="point-content">
-//                 <h4>Diverse Financial Services</h4>
-
-//                 <span className="point-line"></span>
-
-//                 <p>
-//                   We offer mutual funds, PMS, insurance, bonds, AIFs, and
-//                   broking solutions to help investors build diversified
-//                   portfolios.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* CTA */}
-
-//           <button className="about-btn">
-//             <i className="bi bi-chat-fill"></i>
-//             Talk to Our Team
-//           </button>
-//         </div>
-
-//         {/* RIGHT VISUAL */}
-
-//         {/* <div className="about-right">
-//           <div className="about-flow">
-//             <div className="about-flow-top">
-//               <div className="about-flow-box">
-//                 <i className="bi bi-brain-fill"></i>
-//                 <span>18+ Years  of Exp</span>
-//               </div>
-//               <div className="about-flow-box">
-//                 <i className="bi bi-rulers"></i>
-//                 <span>Analysis</span>
-//               </div>
-
-//               <div className="about-flow-box active">
-//                 <i className="bi bi-robot"></i>
-//                 <span>Strategy</span>
-//               </div>
-//             </div>
-
-//             <div className="about-flow-bottom">
-//               <div className="about-flow-box">
-//                 <i className="bi bi-bullseye"></i>
-//                 <span>Risk</span>
-//               </div>
-//             </div>
-
-      
-//           </div>
-//         </div> */}
-
-//         <div className="about-flow">
-//           <div className="about-flow-grid">
-//             <div className="about-flow-box">
-//               <i className="bi bi-brain-fill"></i>
-//               <span>18+ Years  of Exp</span>
-//             </div>
-
-//             <div className="about-flow-box">
-//               <i className="bi bi-rulers"></i>
-//               <span>Analysis</span>
-//             </div>
-
-//             <div className="about-flow-box active">
-//               <i className="bi bi-robot"></i>
-//               <span>Strategy</span>
-//             </div>
-
-//             <div className="about-flow-box">
-//               <i className="bi bi-bullseye"></i>
-//               <span>Risk</span>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default About;
-
 import "./About.css";
 
 function About() {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-
         {/* =========================
             LEFT CONTENT
         ========================== */}
 
         <div className="about-left">
-
-          <div
-            className="about-tag"
-            data-aos="fade-up"
-            data-aos-duration="700"
-          >
-            ABOUT MAKE MY EA
+          <div className="about-tag" data-aos="fade-up" data-aos-duration="700">
+            ABOUT MAKE MYEA
           </div>
 
           <h2
@@ -172,9 +18,9 @@ function About() {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            Financial Technology,
+            Custom Algo & EA
             <br />
-            Trading & <span>Investment Solutions</span>
+            Development by<span> Greekslabs Technologies</span>
           </h2>
 
           <p
@@ -182,10 +28,8 @@ function About() {
             data-aos="fade-up"
             data-aos-duration="900"
           >
-            Greeks Labs Technologies Ltd is a Public Limited Company
-            based in Kozhikode, Kerala, specializing in financial
-            market IT solutions, algorithmic trading development and
-            investment services.
+  MakeMyEa is a specialized financial IT division of Greekslabs Technologies
+  Ltd, focused on building advanced algorithmic trading solutions.
           </p>
 
           <p
@@ -193,92 +37,106 @@ function About() {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            We provide technology-driven financial solutions for
-            investors, traders and corporate clients, with a focus on
-            structured systems, research-based strategies and modern
-            financial technology.
+             We develop custom Expert Advisors, trading bots, and automated systems for
+  Indian and Forex markets, helping traders execute strategies with greater
+  consistency and reduced emotional interference.
           </p>
+
+
 
           {/* =========================
               KEY POINTS
           ========================== */}
 
           <div className="about-points">
-
             {/* POINT 1 */}
 
             <div className="about-point">
-
               <div className="point-icon">
                 <i className="bi bi-check-lg"></i>
               </div>
 
               <div className="point-content">
-
-                <h4>
-                  18+ Years of Experience
-                </h4>
+                <h4>Our Mission</h4>
 
                 <span className="point-line"></span>
 
                 <p>
-                  Experience across financial markets, technology and
-                  investment services.
+                    To empower retail traders with custom algorithmic solutions for
+    disciplined, automated, and emotion-free trading.
                 </p>
-
               </div>
-
             </div>
 
             {/* POINT 2 */}
 
             <div className="about-point">
-
               <div className="point-icon">
                 <i className="bi bi-check-lg"></i>
               </div>
 
               <div className="point-content">
-
-                <h4>
-                  Customised Algo Development
-                </h4>
+                <h4>Our Vision</h4>
 
                 <span className="point-line"></span>
 
                 <p>
-                  Custom trading strategies, APIs, automation and
-                  algorithmic trading solutions.
+                  To become a trusted algo technology partner for retail traders across
+  Indian and global Forex markets.
                 </p>
-
               </div>
-
             </div>
 
             {/* POINT 3 */}
 
-            <div className="about-point">
-
+            {/* <div className="about-point">
               <div className="point-icon">
                 <i className="bi bi-check-lg"></i>
               </div>
 
               <div className="point-content">
-
-                <h4>
-                  Financial Services
-                </h4>
+                <h4>Why Choose MakeMyEa?</h4>
 
                 <span className="point-line"></span>
 
                 <p>
-                  Mutual funds, PMS, insurance, bonds, AIFs, broking
-                  and unlisted share investment solutions.
+                  100% Custom Engineering
+                  <br />
+                  Specialized Market Focus
+                  <br />
+                  Reliable Delivery
                 </p>
-
               </div>
+            </div> */}
 
-            </div>
+<div className="about-point">
+  <div className="point-icon">
+    <i className="bi bi-check-lg"></i>
+  </div>
+
+  <div className="point-content">
+    <h4>Why Choose MakeMyEa?</h4>
+
+    <span className="point-line"></span>
+
+    <div className="about-mini-points">
+      <span>
+        <i className="bi bi-check2-circle"></i>
+        100% Custom Engineering
+      </span>
+
+      <span>
+        <i className="bi bi-check2-circle"></i>
+        Specialized Market Focus
+      </span>
+
+      <span>
+        <i className="bi bi-check2-circle"></i>
+        Reliable Delivery
+      </span>
+    </div>
+  </div>
+</div>
 
           </div>
 
@@ -287,16 +145,15 @@ function About() {
           ========================== */}
 
           <div className="about-buttons">
-
-        <button
-  className="about-btn"
-  onClick={() =>
-    window.open(
-      "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
-      "_blank"
-    )
-  }
->
+            <button
+              className="about-btn"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/919037953858?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20trading%20strategy.",
+                  "_blank",
+                )
+              }
+            >
               <i className="bi bi-chat-fill"></i>
               Talk to Our Team
             </button>
@@ -310,9 +167,7 @@ function About() {
               Our Team
               <i className="bi bi-arrow-up-right"></i>
             </a>
-
           </div>
-
         </div>
 
         {/* =========================
@@ -384,34 +239,23 @@ function About() {
 
         </div> */}
 
-
-{/* =========================
+        {/* =========================
     RIGHT VIDEO
 ========================== */}
 
-<div
-  className="about-right-video"
-  data-aos="fade-left"
-  data-aos-duration="1000"
->
-  <div className="about-video-wrapper">
+        <div
+          className="about-right-video"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <div className="about-video-wrapper">
+            <video autoPlay loop muted playsInline preload="auto">
+              <source src="/images/earth.mp4" type="video/mp4" />
+            </video>
 
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-    >
-      <source
-        src="/images/earth.mp4"
-        type="video/mp4"
-      />
-    </video>
+            <div className="about-video-overlay"></div>
 
-    <div className="about-video-overlay"></div>
-
-    {/* <div className="about-video-content">
+            {/* <div className="about-video-content">
       <span>GREEKSLABS</span>
 
       <h3>
@@ -420,13 +264,8 @@ function About() {
         <strong>Financial Markets</strong>
       </h3>
     </div> */}
-
-  </div>
-</div>
-
-
-
-
+          </div>
+        </div>
       </div>
     </section>
   );
