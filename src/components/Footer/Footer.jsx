@@ -28,7 +28,7 @@ function Footer() {
 
               {/* SOCIAL ICONS */}
 
-              {/* <div className="footer-socials">
+              <div className="footer-socials">
 
                 <a href="#" aria-label="LinkedIn">
                   <i className="bi bi-linkedin"></i>
@@ -46,7 +46,7 @@ function Footer() {
                   <i className="bi bi-facebook"></i>
                 </a>
 
-              </div> */}
+              </div>
             </div>
           </div>
 
